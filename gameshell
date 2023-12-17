@@ -1,0 +1,3008 @@
+
+  |                                                   |
+--+---------------------------------------------------+--
+  | Run the command                                   |
+  | $ gsh goal                                        |
+  | to discover your first mission.                   |
+  |                                                   |
+  | You can check the mission has been completed with |
+  | $ gsh check                                       |
+  |                                                   |
+  | The command                                       |
+  | $ gsh help                                        |
+  | displays the list of available (gsh) commands.    |
+--+---------------------------------------------------+--
+  |                                                   |
+
+[mission 1] $ gsh goal
+
+ __^__                                                                                     __^__
+( ___ )-----------------------------------------------------------------------------------( ___ )
+ |   |                                                                                     |   |
+ | / |  Mission goal                                                                       | \ |
+ | / |  ============                                                                       | \ |
+ | / |                                                                                     | \ |
+ | / |  Go to the top of the main tower of the castle.                                     | \ |
+ | / |                                                                                     | \ |
+ | / |                                                                                     | \ |
+ | / |  Useful commands                                                                    | \ |
+ | / |  ===============                                                                    | \ |
+ | / |                                                                                     | \ |
+ | / |  cd LOCATION                                                                        | \ |
+ | / |  Move to the given location.                                                        | \ |
+ | / |  Remark: ``cd`` is an abbreviation for "change directory".                          | \ |
+ | / |                                                                                     | \ |
+ | / |  pwd                                                                                | \ |
+ | / |  Show the path to your current location.                                            | \ |
+ | / |  Remark: ``pwd`` is an abbreviation for "print working directory".                  | \ |
+ | / |                                                                                     | \ |
+ | / |  ls                                                                                 | \ |
+ | / |  Show a list of locations that are currently accessible.                            | \ |
+ | / |  Remark: ``ls`` is an abbreviation of "list".                                       | \ |
+ | / |                                                                                     | \ |
+ | / |  gsh check                                                                          | \ |
+ | / |  Check if the mission objective has been achieved.                                  | \ |
+ | / |                                                                                     | \ |
+ | / |  gsh reset                                                                          | \ |
+ | / |  Restart the mission from the beginning.                                            | \ |
+ | / |                                                                                     | \ |
+ | / |                                                                                     | \ |
+ | / |  Remarks                                                                            | \ |
+[mission 1] $ ls
+Castle  Forest  Garden  Mountain  Stall
+[mission 1] $ cd Castle/
+[mission 1] $ ls
+Cellar  Great_hall  Main_building  Main_tower  Observatory
+[mission 1] $ cd Main_tower/
+[mission 1] $ ls
+First_floor
+[mission 1] $ cd First_floor/
+[mission 1] $ ls
+Second_floor
+[mission 1] $ cd Second_floor/
+[mission 1] $ ls
+Top_of_the_tower
+[mission 1] $ cd Top_of_the_tower/
+[mission 1] $ gsh check
+
+Congratulations, mission 1 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+[mission 2] $ gsh goal
+
+  ,------------------------------------------------------------------------------.
+ (_\                                                                              \
+    |  Mission goal                                                                |
+    |  ============                                                                |
+    |                                                                              |
+    |  Go the castle's cellar.                                                     |
+    |                                                                              |
+    |                                                                              |
+    |  Secondary objective                                                         |
+    |  -------------------                                                         |
+    |                                                                              |
+    |  Understand the difference between ``cd -`` and ``cd ..``.                   |
+    |                                                                              |
+    |                                                                              |
+    |  Useful commands                                                             |
+    |  ===============                                                             |
+    |                                                                              |
+    |  cd -                                                                        |
+    |  Jump back to the location you were in prior to your last move.              |
+    |                                                                              |
+    |  cd ..                                                                       |
+    |  Move to the parent directory (one step back along the path to your current  |
+    |  location).                                                                  |
+    |                                                                              |
+    |  pwd                                                                         |
+    |  See the path to your current location.                                      |
+    |                                                                              |
+   _|                                                                              |
+  (_/________________________________________________________________________(*)___/
+                                                                              \\
+                                                                               ))
+                                                                               ^
+[mission 2] $ cd -
+/home/kali/gameshell/World/Castle/Main_tower/First_floor/Second_floor
+[mission 2] $ cd -
+/home/kali/gameshell/World/Castle/Main_tower/First_floor/Second_floor/Top_of_the_tower
+[mission 2] $ cd ..
+[mission 2] $ cd ..
+[mission 2] $ cd ..
+[mission 2] $ cd ..
+[mission 2] $ pwd
+/home/kali/gameshell/World/Castle
+[mission 2] $ ls
+Cellar  Great_hall  Main_building  Main_tower  Observatory
+[mission 2] $ cd Cellar/
+[mission 2] $ ghs check
+Command 'ghs' not found, did you mean:
+  command 'ghc' from deb ghc
+  command 'gs' from deb ghostscript
+  command 'gh' from deb gh
+  command 'ghb' from deb handbrake
+  command 'gss' from deb libgss-dev
+  command 'gjs' from deb gjs
+Try: sudo apt install <deb name>
+[mission 2] $ gsh check
+
+Congratulations, mission 2 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+[mission 3] $ gsh goal
+
+  ,----------------------------------------------------------------------------------.
+ (_\                                                                                  \
+    |  Mission goal                                                                    |
+    |  ============                                                                    |
+    |                                                                                  |
+    |  Go back to the starting location and then go to the throne room using only two  |
+    |  commands.                                                                       |
+    |                                                                                  |
+    |  Remark                                                                          |
+    |  ------                                                                          |
+    |                                                                                  |
+    |  You may experiment with as many commands as you want, but                       |
+    |  to validate the mission the following conditions need to be met:                |
+    |  - the second to last command takes you to the starting point,                   |
+    |  - the last command takes you directly to the throne room.                       |
+    |                                                                                  |
+    |                                                                                  |
+    |  Useful commands                                                                 |
+    |  ===============                                                                 |
+    |                                                                                  |
+    |  cd                                                                              |
+    |  Move back to the starting location.                                             |
+    |                                                                                  |
+    |  cd LOCATION1/LOCATION2/LOCATION3                                                |
+    |  Make several moves in one command.                                              |
+    |                                                                                  |
+    |                                                                                  |
+    |  Remark                                                                          |
+    |  ------                                                                          |
+    |                                                                                  |
+    |  UPPERCASE words appearing in commands are meta-variables: you need to replace   |
+    |  them by appropriate (string) values.                                            |
+[mission 3] $ cd
+[mission 3] $ ls
+Castle  Forest  Garden  Mountain  Stall
+[mission 3] $ cd Castle/
+[mission 3] $ ls
+Cellar  Great_hall  Main_building  Main_tower  Observatory
+[mission 3] $ cd Main_building/
+[mission 3] $ ls
+Library  Throne_room
+[mission 3] $ cd
+[mission 3] $ cd Castle/Main_building/Throne_room/
+[mission 3] $ gsh check
+
+Congratulations, mission 3 has been successfully completed!
+                                                                                                              
+
+
+                 _.--.           Well done!!!
+             _.-'_:-'||          
+         _.-'_.-::::'||          From now on, the current location will be shown just before the command 
+    _.-:'_.-::::::'  ||          prompt.
+  .'`-.-:::::::'     ||          
+ /.'`;|:::::::'      ||_         
+||   ||::::::'     _.;._'-._     
+||   ||:::::'  _.-!oo @.!-._'-.  
+\'.  ||:::::.-!()oo @!()@.-'_.|  
+ '.'-;|:.-'.&$@.& ()$%-'o.'\U||  
+   `>'-.!@%()@'@_%-'_.-o _.|'||  
+ jgs||-._'-.@.-'_.-' _.-o  |'||  
+    ||=[ '-._.-\U/.-'    o |'||  
+    || '-.]=|| |'|      o  |'||  
+    ||      || |'|        _| ';  
+    ||      || |'|    _.-'_.-'   
+    |'-._   || |'|_.-'_.-'       
+     '-._'-.|| |' `_.-'          
+         '-.||_/.-'              
+
+
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_building/Throne_room
+[mission 4] $ gsh goal
+
+      _____________________________________________________________________
+    / \                                                                    \.
+   |   | Mission goal                                                      |.
+    \_ | ============                                                      |.
+       |                                                                   |.
+       | Build a "Hut" in the forest, and then build a "Chest" in the hut. |.
+       |                                                                   |.
+       |                                                                   |.
+       | Useful commands                                                   |.
+       | ===============                                                   |.
+       |                                                                   |.
+       | mkdir DIRECTORY                                                   |.
+       | Create a new directory inside the current directory.              |.
+       | Remark: ``mkdir`` is an abbreviation for "make directory".        |.
+       |   ________________________________________________________________|___
+       |  /                                                                   /.
+       \_/___________________________________________________________________/.
+
+
+~/Castle/Main_building/Throne_room
+[mission 4] $ cd
+
+~
+[mission 4] $ ls
+Castle  Forest  Garden  Mountain  Stall
+
+~
+[mission 4] $ cd Forest
+
+~/Forest
+[mission 4] $ mkdir Hut
+
+~/Forest
+[mission 4] $ cd Hut
+
+~/Forest/Hut
+[mission 4] $ mkdir Chest
+
+~/Forest/Hut
+[mission 4] $ gsh check
+
+Congratulations, mission 4 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Forest/Hut
+[mission 5] $ gsh goal
+
+  .---------------------------------------------------------------------------------------------------.
+ /  .-.                                                                                           .-.  \
+|  /   \                                                                                         /   \  |
+| |\_.  |   Mission goal                                                                        |    /| |
+|\|  | /|   ============                                                                        |\  | |/|
+| `---' |                                                                                       | `---' |
+|       |   Go back to the cellar and get rid of all the spiders. Leave the bats alone: they    |       |
+|       |   appear on the castle's coat of arms and are said to confer luck.                    |       |
+|       |                                                                                       |       |
+|       |                                                                                       |       |
+|       |   Useful commands                                                                     |       |
+|       |   ===============                                                                     |       |
+|       |                                                                                       |       |
+|       |   rm FILE1 FILE2 ... FILEn                                                            |       |
+|       |   Delete the files (permanently).                                                     |       |
+|       |   Remark: ``rm`` is an abbreviation for "remove".                                     |       |
+|       |                                                                                       |       |
+|       |---------------------------------------------------------------------------------------|       |
+\       |                                                                                       |       /
+ \     /                                                                                         \     /
+  `---'                                                                                           `---'
+
+
+~/Forest/Hut
+[mission 5] $ cd
+
+~
+[mission 5] $ ls
+Castle  Forest  Garden  Mountain  Stall
+
+~
+[mission 5] $ cd Castle/
+
+~/Castle
+[mission 5] $ ls
+Cellar  Great_hall  Main_building  Main_tower  Observatory
+
+~/Castle
+[mission 5] $ cd Cellar/
+
+~/Castle/Cellar
+[mission 5] $ ls
+barrel_of_apples  bat_1  bat_2  spider_1  spider_2  spider_3
+
+~/Castle/Cellar
+[mission 5] $ rm spider_1
+
+~/Castle/Cellar
+[mission 5] $ rm spider_2
+
+~/Castle/Cellar
+[mission 5] $ rm spider_3
+
+~/Castle/Cellar
+[mission 5] $ gsh check
+
+Congratulations, mission 5 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 6] $ gsh goal
+
+ /&\/\_..----------------------------------------------------------------------------------------._/\/&\
+(     _||                                                                                       ||_     )
+ \_/\/ ||   Mission goal                                                                        || \/\_/
+       ||   ============                                                                        ||
+       ||                                                                                       ||
+       ||   Collect all the coins that you can find in the garden in front of the castle,       ||
+       ||   and put them in your chest in your hut in the forest.                               ||
+       ||                                                                                       ||
+       ||                                                                                       ||
+       ||   Useful commands                                                                     ||
+       ||   ===============                                                                     ||
+       ||                                                                                       ||
+       ||   mv FILE1 FILE2 ... FILEn DIRECTORY                                                  ||
+       ||   Move the files to the directory.                                                    ||
+       ||   Remark: ``mv`` is an abbreviation of "move".                                        ||
+       ||                                                                                       ||
+       ||   ~                                                                                   ||
+       ||   The "~" symbol is an abbreviation for the initial directory.                        ||
+       ||   Example: wherever you are, ``~/Tavern`` denotes the directory (or file) "Tavern"    ||
+       ||   in the initial directory.                                                           ||
+       ||                                                                                       ||
+ /&\/\_|-----------------------------------------------------------------------------------------|_/\/&\
+(     _|                                                                                         |_     )
+ \_/\/ `-----------------------------------------------------------------------------------------' \/\_/
+
+
+~/Castle/Cellar
+[mission 6] $ cd
+
+~
+[mission 6] $ ls
+Castle  Forest  Garden  Mountain  Stall
+
+~
+[mission 6] $ cd Garden/
+
+~/Garden
+[mission 6] $ ls
+coin_1  coin_2  coin_3  Flower_garden  Maze  Shed
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 -/Forest/Hut/Chest
+mv: invalid option -- '/'
+Try 'mv --help' for more information.
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 /Forest/Hut/Chest
+mv: target '/Forest/Hut/Chest': No such file or directory
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 Forest/Hut/Chest
+mv: target 'Forest/Hut/Chest': No such file or directory
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 -/Forest/Hut/Chest
+mv: invalid option -- '/'
+Try 'mv --help' for more information.
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 -Forest/Hut/Chest
+mv: invalid option -- 'F'
+Try 'mv --help' for more information.
+
+~/Garden
+[mission 6] $ ^C
+
+~/Garden
+[mission 6] $ mv coin_1 coin_2 coin_3 ~/Forest/Hut/Chest
+
+~/Garden
+[mission 6] $ gsh check
+
+Congratulations, mission 6 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden
+[mission 7] $ gsh goal
+
+ __^__                                                                                    __^__
+( ___ )----------------------------------------------------------------------------------( ___ )
+ |   |                                                                                    |   |
+ | / |  Mission goal                                                                      | \ |
+ | / |  ============                                                                      | \ |
+ | / |                                                                                    | \ |
+ | / |  Collect all the coins hidden in the garden in front of the castle, and put them   | \ |
+ | / |  in your chest (in your hut in the forest).                                        | \ |
+ | / |                                                                                    | \ |
+ | / |                                                                                    | \ |
+ | / |  Secondary objective                                                               | \ |
+ | / |  -------------------                                                               | \ |
+ | / |                                                                                    | \ |
+ | / |  Learn how to use the "Tab" key to go faster.                                      | \ |
+ | / |                                                                                    | \ |
+ | / |                                                                                    | \ |
+ | / |  Useful commands                                                                   | \ |
+ | / |  ===============                                                                   | \ |
+ | / |                                                                                    | \ |
+ | / |  ls -A                                                                             | \ |
+ | / |  List all the files of the current directory, including hidden files. (A file is   | \ |
+ | / |  "hidden" when its name starts with a dot.)                                        | \ |
+ | / |                                                                                    | \ |
+ | / |  Tab                                                                               | \ |
+ | / |  The tabulation key "completes" the name of a file or directory once you have      | \ |
+ | / |  typed the beginning of its name. This only works                                  | \ |
+ | / |  if there is only one possible completion.                                         | \ |
+ | / |                                                                                    | \ |
+ | / |  Tab-Tab                                                                           | \ |
+ | / |  Pressing tabulation twice successively shows a list of possible completions.      | \ |
+ |___|                                                                                    |___|
+(_____)----------------------------------------------------------------------------------(_____)
+
+~/Garden
+[mission 7] $ mv 
+.16153_coin_2  .26924_coin_3  .56297_coin_1  Flower_garden/ Maze/          Shed/          
+
+~/Garden
+[mission 7] $ mv .16153_coin_2 .26924_coin_3 .56297_coin_1 ~/Forest/Hut/Chest
+
+~/Garden
+[mission 7] $ gsh check
+
+Congratulations, mission 7 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden
+[mission 8] $ gsh goal
+
+  .---------------------------------------------------------------------------------------------------.
+ /  .-.                                                                                           .-.  \
+|  /   \                                                                                         /   \  |
+| |\_.  |   Mission goal                                                                        |    /| |
+|\|  | /|   ============                                                                        |\  | |/|
+| `---' |                                                                                       | `---' |
+|       |   Get rid of all the spiders that are crawling in the cellar. Again, do not do not    |       |
+|       |   disturb the bats.                                                                   |       |
+|       |                                                                                       |       |
+|       |                                                                                       |       |
+|       |   Shell patterns                                                                      |       |
+|       |   ==============                                                                      |       |
+|       |                                                                                       |       |
+|       |   *                                                                                   |       |
+|       |   The "*" character stands in for any sequence of characters                          |       |
+|       |   (including an empty sequence).                                                      |       |
+|       |                                                                                       |       |
+|       |   ?                                                                                   |       |
+|       |   The "?" character stands in for any single character.                               |       |
+|       |                                                                                       |       |
+|       |   Those wildcards can be used to denote lists of existing files / directories in      |       |
+|       |   the current working directory.                                                      |       |
+|       |                                                                                       |       |
+|       |   For example: if the current folder contains                                         |       |
+|       |   file-1 Folder-1 file-14 potato                                                      |       |
+|       |   then                                                                                |       |
+|       |       *     -->  file-1 Folder-1 file-14 potato                                       |       |
+|       |       *1    -->  file-1 Folder-1                                                      |       |
+|       |       *o*   -->  Folder-1 potato                                                      |       |
+|       |       x*    -->  error, no matching file                                              |       |
+|       |       *-?   -->  file-1 Folder-1                                                      |       |
+|       |       *-??  -->  file-14                                                              |       |
+|       |                                                                                       |       |
+|       |---------------------------------------------------------------------------------------|       |
+\       |                                                                                       |       /
+ \     /                                                                                         \     /
+  `---'                                                                                           `---'
+
+
+~/Garden
+[mission 8] $ cd
+
+~
+[mission 8] $ ls
+Castle  Forest  Garden  Mountain  Stall
+
+~
+[mission 8] $ cd Castle/
+
+~/Castle
+[mission 8] $ ls
+Cellar  Great_hall  Main_building  Main_tower  Observatory
+
+~/Castle
+[mission 8] $ cd Cellar/
+
+~/Castle/Cellar
+[mission 8] $ ls
+10835_bat_4      15658_spider_29  20540_spider_18  24989_spider_32  3873_spider_30  8335_spider_25
+11764_spider_27  16362_spider_12  21708_spider_48  25698_spider_49  433_spider_31   8342_bat_3
+12029_spider_4   16678_spider_26  21986_spider_7   25906_spider_5   4348_spider_22  852_spider_50
+12030_spider_20  16902_spider_10  22191_spider_8   26761_spider_1   4891_bat_5      8682_spider_43
+13163_spider_14  1726_spider_33   22793_spider_21  29257_spider_15  5995_spider_40  946_spider_42
+13248_spider_39  17769_spider_45  22814_spider_23  29647_spider_36  6699_spider_9   barrel_of_apples
+14244_spider_44  19440_spider_2   23824_spider_19  30036_spider_17  7211_spider_13
+14961_spider_41  19677_spider_46  23967_spider_3   30055_spider_28  7809_spider_37
+14982_spider_38  20137_spider_35  24783_spider_6   31268_bat_2      8058_spider_47
+15461_spider_24  20504_spider_34  24835_spider_11  32761_spider_16  8073_bat_1
+
+~/Castle/Cellar
+[mission 8] $ rm *spider*
+
+~/Castle/Cellar
+[mission 8] $ ls
+10835_bat_4  31268_bat_2  4891_bat_5  8073_bat_1  8342_bat_3  barrel_of_apples
+
+~/Castle/Cellar
+[mission 8] $ gsh check
+
+Congratulations, mission 8 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 9] $ gsh goal
+
+  ,-----------------------------------------------------------------------------------.
+ (_\                                                                                   \
+    |  Mission goal                                                                     |
+    |  ============                                                                     |
+    |                                                                                   |
+    |  The spiders are getting clever: they found a way to hide.                        |
+    |  Get rid of all the spiders that are hiding in the cellar without disturbing the  |
+    |  bats.                                                                            |
+    |                                                                                   |
+    |                                                                                   |
+    |  Shell patterns                                                                   |
+    |  ==============                                                                   |
+    |                                                                                   |
+    |  *                                                                                |
+    |  The "*" character stands in for any sequence of characters (including an empty   |
+    |  sequence).                                                                       |
+    |                                                                                   |
+    |  ?                                                                                |
+    |  The "?" character stands in for any single character.                            |
+    |                                                                                   |
+    |                                                                                   |
+    |  Remark                                                                           |
+    |  ------                                                                           |
+    |                                                                                   |
+    |  The wildcards "*" and "?" don't see hidden files, you need to add an explicit    |
+    |  dot at the start of the pattern.                                                 |
+   _|                                                                                   |
+  (_/_____________________________________________________________________________(*)___/
+                                                                                   \\
+                                                                                    ))
+                                                                                    ^
+
+
+~/Castle/Cellar
+[mission 9] $ ls
+10835_bat_4  31268_bat_2  4891_bat_5  8073_bat_1  8342_bat_3  barrel_of_apples
+
+~/Castle/Cellar
+[mission 9] $ ls -l
+total 24
+-rw-r--r-- 1 kali kali 211 Dec 15 14:01 10835_bat_4
+-rw-r--r-- 1 kali kali 192 Dec 15 14:01 31268_bat_2
+-rw-r--r-- 1 kali kali 211 Dec 15 14:01 4891_bat_5
+-rw-r--r-- 1 kali kali 211 Dec 15 14:01 8073_bat_1
+-rw-r--r-- 1 kali kali 211 Dec 15 14:01 8342_bat_3
+-rw-r--r-- 1 kali kali 121 Dec 15 13:43 barrel_of_apples
+
+~/Castle/Cellar
+[mission 9] $ ls -la
+total 252
+drwxr-xr-x 2 kali kali 4096 Dec 15 14:04 .
+drwxr-xr-x 7 kali kali 4096 Dec 15 13:42 ..
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 10835_bat_4
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11034_spider_17
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11043_spider_50
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11054_spider_31
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11314_spider_3
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11477_spider_13
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .11651_spider_26
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .11809_spider_43
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .11993_spider_35
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .12951_spider_49
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .13088_spider_6
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .13128_spider_27
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .137_spider_30
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .14070_spider_15
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .14793_spider_47
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .14990_spider_1
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .15323_spider_10
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .15824_spider_11
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .16056_spider_5
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .16893_spider_18
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .17741_spider_48
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .18580_spider_2
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .18759_spider_45
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .19716_spider_44
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .21725_spider_25
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .2189_spider_24
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .23139_spider_14
+-rw-r--r-- 1 kali kali  239 Dec 15 14:04 .24656_bat_4
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .25181_spider_7
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .26978_spider_22
+-rw-r--r-- 1 kali kali  239 Dec 15 14:04 .27758_bat_3
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .28723_spider_8
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .29084_spider_12
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .2916_spider_39
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .30143_spider_32
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .30282_spider_9
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .30991_spider_28
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .31017_spider_36
+-rw-r--r-- 1 kali kali  192 Dec 15 14:01 31268_bat_2
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .3126_spider_46
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .31300_spider_41
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .31649_spider_21
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .32073_spider_37
+-rw-r--r-- 1 kali kali  258 Dec 15 14:04 .4084_bat_5
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .4687_spider_4
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .4808_spider_16
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 4891_bat_5
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .617_spider_20
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .6771_spider_38
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .704_spider_23
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .7055_spider_42
+-rw-r--r-- 1 kali kali  196 Dec 15 14:04 .7453_bat_2
+-rw-r--r-- 1 kali kali   66 Dec 15 14:04 .7737_spider_33
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .797_spider_29
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 8073_bat_1
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 8342_bat_3
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .8400_spider_19
+-rw-r--r-- 1 kali kali   34 Dec 15 14:04 .8865_spider_40
+-rw-r--r-- 1 kali kali  169 Dec 15 14:04 .9773_spider_34
+-rw-r--r-- 1 kali kali  258 Dec 15 14:04 .9775_bat_1
+-rw-r--r-- 1 kali kali  121 Dec 15 13:43 barrel_of_apples
+
+~/Castle/Cellar
+[mission 9] $ rm *_s?
+rm: cannot remove '*_s?': No such file or directory
+
+~/Castle/Cellar
+[mission 9] $ rm *.?_s?
+rm: cannot remove '*.?_s?': No such file or directory
+
+~/Castle/Cellar
+[mission 9] $ rm .*spider*
+
+~/Castle/Cellar
+[mission 9] $ ls
+10835_bat_4  31268_bat_2  4891_bat_5  8073_bat_1  8342_bat_3  barrel_of_apples
+
+~/Castle/Cellar
+[mission 9] $ gsh check
+
+Congratulations, mission 9 has been successfully completed!
+                                                                                                              
+
+
+                 _.--.           Congratulations !
+             _.-'_:-'||          
+         _.-'_.-::::'||          From now on, the ``ls`` command will automatically show a "/" character at 
+    _.-:'_.-::::::'  ||          the end of directories.
+  .'`-.-:::::::'     ||          
+ /.'`;|:::::::'      ||_         
+||   ||::::::'     _.;._'-._     
+||   ||:::::'  _.-!oo @.!-._'-.  
+\'.  ||:::::.-!()oo @!()@.-'_.|  
+ '.'-;|:.-'.&$@.& ()$%-'o.'\U||  
+   `>'-.!@%()@'@_%-'_.-o _.|'||  
+ jgs||-._'-.@.-'_.-' _.-o  |'||  
+    ||=[ '-._.-\U/.-'    o |'||  
+    || '-.]=|| |'|      o  |'||  
+    ||      || |'|        _| ';  
+    ||      || |'|    _.-'_.-'   
+    |'-._   || |'|_.-'_.-'       
+     '-._'-.|| |' `_.-'          
+         '-.||_/.-'              
+
+
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 10] $ gsh goal
+
+ __^__                                                                                     __^__
+( ___ )-----------------------------------------------------------------------------------( ___ )
+ |   |                                                                                     |   |
+ | / |  Mission goal                                                                       | \ |
+ | / |  ============                                                                       | \ |
+ | / |                                                                                     | \ |
+ | / |  You have taken a fancy to the four standards in the great hall of the castle. As   | \ |
+ | / |  stealing them would not go unnoticed, put a copy (same name, same content) of      | \ |
+ | / |  each in your chest.                                                                | \ |
+ | / |                                                                                     | \ |
+ | / |                                                                                     | \ |
+ | / |  Useful commands                                                                    | \ |
+ | / |  ===============                                                                    | \ |
+ | / |                                                                                     | \ |
+ | / |  cp FILE DIRNAME                                                                    | \ |
+ | / |  Copy the file to the directory.                                                    | \ |
+ | / |  Remark: ``cp`` is an abbreviation of "copy".                                       | \ |
+ |___|                                                                                     |___|
+(_____)-----------------------------------------------------------------------------------(_____)
+
+
+~/Castle/Cellar
+[mission 10] $ cd ..
+
+~/Castle
+[mission 10] $ ls
+Cellar/  Great_hall/  Main_building/  Main_tower/  Observatory/
+
+~/Castle
+[mission 10] $ cd Main_building/
+
+~/Castle/Main_building
+[mission 10] $ ls
+Library/  Throne_room/
+
+~/Castle/Main_building
+[mission 10] $ cd Throne_room/
+
+~/Castle/Main_building/Throne_room
+[mission 10] $ ls
+Kings_quarter/
+
+~/Castle/Main_building/Throne_room
+[mission 10] $ cd ..
+
+~/Castle/Main_building
+[mission 10] $ cd ..
+
+~/Castle
+[mission 10] $ cd Great_hall/
+
+~/Castle/Great_hall
+[mission 10] $ ls
+28706_suit_of_armour  41296_decorative_shield  standard_2  standard_4
+30524_stag_head       standard_1               standard_3
+
+~/Castle/Great_hall
+[mission 10] $ cp *standard* ^C
+
+~/Castle/Great_hall
+[mission 10] $ cp *standard* ~/Forest/Hut/Chest
+
+~/Castle/Great_hall
+[mission 10] $ gsh check
+
+Congratulations, mission 10 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Great_hall
+[mission 11] $ gsh goal
+
+     _______________________________________________________________________________________
+    /\                                                                                      \
+(O)===)><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><)==(O)
+    \/''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''/
+    (                                                                                      (
+     )  Mission goal                                                                        )
+    (   ============                                                                       (
+     )                                                                                      )
+    (   The tapestries in the castle's great hall are also particularly beautiful. Put a   (
+     )  copy of each in your chest.                                                         )
+    (                                                                                      (
+     )                                                                                      )
+    (   Useful commands                                                                    (
+     )  ===============                                                                     )
+    (                                                                                      (
+     )  cp FILE1 FILE2 ... FILEn DIRNAME                                                    )
+    (   Copy the files to the directory.                                                   (
+     )  Remark: ``cp`` is an abbreviation of "copy".                                        )
+    (                                                                                      (
+     )                                                                                      )
+    (   Shell patterns                                                                     (
+     )  ==============                                                                      )
+    (                                                                                      (
+     )  *                                                                                   )
+    (   The "*" character stands in for any sequence of characters                         (
+     )  (including an empty sequence).                                                      )
+    (                                                                                      (
+     )  ?                                                                                   )
+    (   The "?" character stands in for any single character.                              (
+     )                                                                                      )
+    (                                                                                      (
+    /\''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\
+(O)===)><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><)==(O)
+
+~/Castle/Great_hall
+[mission 11] $ ls
+10819_tapestry_10  25415_tapestry_08        62434_tapestry_06  8937_tapestry_02  standard_4
+15849_tapestry_07  32034_decorative_shield  64445_tapestry_04  standard_1
+20504_tapestry_01  36559_suit_of_armour     65091_tapestry_03  standard_2
+23032_stag_head    55591_tapestry_09        761_tapestry_05    standard_3
+
+~/Castle/Great_hall
+[mission 11] $ cp *tapestry* ~/Forest/Hut/Chest
+
+~/Castle/Great_hall
+[mission 11] $ gsh goal
+
+      _____________________________________________________________________________________
+    / \                                                                                    \.
+   |   | Mission goal                                                                      |.
+    \_ | ============                                                                      |.
+       |                                                                                   |.
+       | The tapestries in the castle's great hall are also particularly beautiful. Put a  |.
+       | copy of each in your chest.                                                       |.
+       |                                                                                   |.
+       |                                                                                   |.
+       | Useful commands                                                                   |.
+       | ===============                                                                   |.
+       |                                                                                   |.
+       | cp FILE1 FILE2 ... FILEn DIRNAME                                                  |.
+       | Copy the files to the directory.                                                  |.
+       | Remark: ``cp`` is an abbreviation of "copy".                                      |.
+       |                                                                                   |.
+       |                                                                                   |.
+       | Shell patterns                                                                    |.
+       | ==============                                                                    |.
+       |                                                                                   |.
+       | *                                                                                 |.
+       | The "*" character stands in for any sequence of characters                        |.
+       | (including an empty sequence).                                                    |.
+       |                                                                                   |.
+       | ?                                                                                 |.
+       | The "?" character stands in for any single character.                             |.
+       |   ________________________________________________________________________________|___
+       |  /                                                                                   /.
+       \_/___________________________________________________________________________________/.
+
+
+~/Castle/Great_hall
+[mission 11] $ gsh check
+
+Congratulations, mission 11 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Great_hall
+[mission 12] $ gsh goal
+
+  ______________________________________________________________________________________________
+ /  __                                                                                      __  \
+|  /  \   Mission goal                                                                     /  \  |
+|\ \   |  ============                                                                    |   / /|
+| \___/|                                                                                  |\___/ |
+|      |  While wandering around the first floor of the main tower, some magnificent      |      |
+|      |  paintings catch your eye. Add a copy of the oldest one to your chest.           |      |
+|      |                                                                                  |      |
+|      |                                                                                  |      |
+|      |  Secondary objectives                                                            |      |
+|      |  --------------------                                                            |      |
+|      |                                                                                  |      |
+|      |  Take a moment to admire the sheer beauty of the paintings.                      |      |
+|      |                                                                                  |      |
+|      |                                                                                  |      |
+|      |  Useful commands                                                                 |      |
+|      |  ===============                                                                 |      |
+|      |                                                                                  |      |
+|      |  ls -l                                                                           |      |
+|      |  Print the list of files of the current directory, with additional information   |      |
+|      |  including last modification date.                                               |      |
+|      |                                                                                  |      |
+|      |  cat FILE                                                                        |      |
+|      |  Display the contents of the file.                                               |      |
+|      |                                                                                  |      |
+ \     |__________________________________________________________________________________|     /
+  \___/                                                                                    \___/
+
+
+~/Castle/Great_hall
+[mission 12] $ ls
+10819_tapestry_10  25415_tapestry_08        62434_tapestry_06  8937_tapestry_02  standard_4
+15849_tapestry_07  32034_decorative_shield  64445_tapestry_04  standard_1
+20504_tapestry_01  36559_suit_of_armour     65091_tapestry_03  standard_2
+23032_stag_head    55591_tapestry_09        761_tapestry_05    standard_3
+
+~/Castle/Great_hall
+[mission 12] $ cd ..
+
+~/Castle
+[mission 12] $ ls
+Cellar/  Great_hall/  Main_building/  Main_tower/  Observatory/
+
+~/Castle
+[mission 12] $ cd Main_tower/
+
+~/Castle/Main_tower
+[mission 12] $ ls
+First_floor/
+
+~/Castle/Main_tower
+[mission 12] $ cd First_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls
+painting_kiveYbDu  painting_lqSdJFxU  painting_RBgijmOc  Second_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cat painting_kiveYbDu 
+ee64226ee82f03ef589a9259717b726b63247ea2@19869
+/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ /
+/ \                                             / \
+\ /                                             \ /
+/ \                                   88Z8888   / \
+\ /                              D888$88        \ /
+/ \                            88888            / \
+\ /                          88888              \ /
+/ \                         88Z88               / \
+\ /                       888ZD8                \ /
+/ \       ZZ$M88D         88ZZ88                / \
+\ /    77MMMMMM88M       I~:Z88                 \ /
+/ \   NN877$MNNNMMM    MM::=I7                  / \
+\ /   NNNNNNNNNNNNNN NMM88MI                    \ /
+/ \   DDDDDDDDDNNNNNNNN8MMM                     / \
+\ /    8888888DDNNNNNNNNMM                      \ /
+/ \    8OZZZO88DDNNNNNNNM                       / \
+\ /     Z$7$ZO88DNNNNNM                         \ /
+/ \     Z$7$ZO88DNNNN                           / \
+\ /     NNZZO88DDNNNNNNN                        \ /
+/ \   NNNNNNNNNNNNNNNNNNN                       / \
+\ /                                             \ /
+/ \       Ceci n'est pas un fichier             / \
+\ /                                             \ /
+/ \                                             / \
+\ /                                             \ /
+/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ /
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cat painting_lqSdJFxU 
+cf57c84e611bc87f458bd3421550ff77d97ba116@34307
+/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ /
+/ \                                                         / \
+\ /                                                         \ /
+/ \                                 /~\                     / \
+\ /                                |oo )                    \ /
+/ \                                _\=/_                    / \
+\ /                ___            /  _  \                   \ /
+/ \               / ()\          //|/.\|\\                  / \
+\ /             _|_____|_       ||  \_/  ||                 \ /
+/ \            | | === | |      || |\ /| ||                 / \
+\ /            |_|  O  |_|       # \_ _/ #                  \ /
+/ \             ||  O  ||          | | |                    / \
+\ /             ||__*__||          | | |                    \ /
+/ \            |~ \___/ ~|         []|[]                    / \
+\ /            /=\ /=\ /=\         | | |     Simon Jansen   \ /
+/ \  __________[_]_[_]_[_]________/_]_[_\________________   / \
+\ /                                                         \ /
+/ \                                                         / \
+\ /                                                         \ /
+/ \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ / \ /
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cat painting_RBgijmOc 
+8348ec8b36396f7ae458bc4a761ffb289338b6de@41220
+/ \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ /
+/ \                             / \
+\ /  ________________________   \ /
+/ \ |.----------------------.|  / \
+\ / ||                      ||  \ /
+/ \ ||       ______         ||  / \
+\ / ||     .;;;;;;;;.       ||  \ /
+/ \ ||    /;;;;;;;;;;;\     ||  / \
+\ / ||   /;/`    `-;;;;; . .||  \ /
+/ \ ||   |;|__  __  \;;;|   ||  / \
+\ / ||.-.|;| e`/e`  |;;;|   ||  \ /
+/ \ ||   |;|  |     |;;;|'--||  / \
+\ / ||   |;|  '-    |;;;|   ||  \ /
+/ \ ||   |;;\ --'  /|;;;|   ||  / \
+\ / ||   |;;;;;---'\|;;;|   ||  \ /
+/ \ ||   |;;;;|     |;;;|   ||  / \
+\ / ||   |;;.-'     |;;;|   ||  \ /
+/ \ ||'--|/`        |;;;|--.||  / \
+\ / ||;;;;    .     ;;;;.\;;||  \ /
+/ \ ||;;;;;-.;_    /.-;;;;;;||  / \
+\ / ||;;;;;;;;;;;;;;;;;;;;;;||  \ /
+/ \ ||jgs;;;;;;;;;;;;;;;;;;;||  / \
+\ / '------------------------'  \ /
+/ \                             / \
+\ /                             \ /
+/ \ / \ / \ / \ / \ / \ / \ / \ / \
+\ / \ / \ / \ / \ / \ / \ / \ / \ /
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cp painting_RBgijmOc ~/Forest/Hut/Chest
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ gsh check
+The painting is not in your chest...
+
+Sorry, mission 12 hasn't been completed.
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls -l
+total 16
+-rw-r--r-- 1 kali kali 1055 Apr 23  2016 painting_dgSMqssR
+-rw-r--r-- 1 kali kali 1503 Jun 19  1981 painting_NTWSTJKv
+-rw-r--r-- 1 kali kali 1454 Oct 14  2003 painting_PVzimtIR
+drwxr-xr-x 3 kali kali 4096 Dec 15 13:42 Second_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cp painting_PVzimtIR ~/Forest/Hut/Chest
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ gsh check
+The painting is not in your chest...
+
+Sorry, mission 12 hasn't been completed.
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls ~/Forest/Hut/Chest
+10819_tapestry_10  25415_tapestry_08  64445_tapestry_04  8937_tapestry_02  coin_3      standard_3
+15849_tapestry_07  55591_tapestry_09  65091_tapestry_03  coin_1            standard_1  standard_4
+20504_tapestry_01  62434_tapestry_06  761_tapestry_05    coin_2            standard_2
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cp painting_PVzimtIR ~/Forest/Hut/Chest
+cp: cannot stat 'painting_PVzimtIR': No such file or directory
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls ~/Forest/Hut/Chest
+10819_tapestry_10  25415_tapestry_08  64445_tapestry_04  8937_tapestry_02  coin_3      standard_3
+15849_tapestry_07  55591_tapestry_09  65091_tapestry_03  coin_1            standard_1  standard_4
+20504_tapestry_01  62434_tapestry_06  761_tapestry_05    coin_2            standard_2
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls ~/Forest/Hut/
+Chest/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls
+painting_BNzRYURG  painting_JBTvSgjp  painting_pFYWWYcr  Second_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls -l
+total 16
+-rw-r--r-- 1 kali kali 1503 Dec 25  2014 painting_BNzRYURG
+-rw-r--r-- 1 kali kali 1455 Jan 22  1982 painting_JBTvSgjp
+-rw-r--r-- 1 kali kali 1054 Nov 20  1998 painting_pFYWWYcr
+drwxr-xr-x 3 kali kali 4096 Dec 15 13:42 Second_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cp painting_pFYWWYcr ~/Forest/Hut/Chest
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ gsh check
+The painting is not in your chest...
+
+Sorry, mission 12 hasn't been completed.
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ ls -l
+total 16
+-rw-r--r-- 1 kali kali 1503 Jun  7  1981 painting_MjqjoHDB
+-rw-r--r-- 1 kali kali 1054 Aug 27  2014 painting_tYykSuEm
+-rw-r--r-- 1 kali kali 1455 Jul  5  2003 painting_vjyYqTjS
+drwxr-xr-x 3 kali kali 4096 Dec 15 13:42 Second_floor/
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ cp painting_MjqjoHDB ~/Forest/Hut/Chest
+
+~/Castle/Main_tower/First_floor
+[mission 12] $ gsh check
+
+Congratulations, mission 12 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 13] $ gsh goal
+
+                                                                                  .---.
+                                                                                 /  .  \
+                                                                                |\_/|   |
+                                                                                |   |  /|
+  .-----------------------------------------------------------------------------------' |
+ /  .-.                                                                                 |
+|  /   \                                                                                |
+| |\_.  |   Mission goal                                                                |
+|\|  | /|   ============                                                                |
+| `---' |                                                                               |
+|       |   Nostradamus predicted a spectacular star conjunction on the 09-16-2028.     |
+|       |   But what will the day of the week be on that date?                          |
+|       |                                                                               |
+|       |   When you have it, run the command ``gsh check``.                            |
+|       |                                                                               |
+|       |                                                                               |
+|       |   Useful commands                                                             |
+|       |   ===============                                                             |
+|       |                                                                               |
+|       |   cal                                                                         |
+|       |   Print a calendar for the current month.                                     |
+|       |                                                                               |
+|       |   cal YEAR                                                                    |
+|       |   Print a calendar for the given year.                                        |
+|       |                                                                               |
+|       |                                                                              /
+|       |-----------------------------------------------------------------------------'
+\       |                                                                       
+ \     /                                                                        
+  `---'                                                                         
+
+
+~/Castle/Main_tower/First_floor
+[mission 13] $ cal 09-16-2028
+cal: not a valid year 09-16-2028
+
+~/Castle/Main_tower/First_floor
+[mission 13] $ cal
+   December 2023      
+Su Mo Tu We Th Fr Sa  
+                1  2  
+ 3  4  5  6  7  8  9  
+10 11 12 13 14 15 16  
+17 18 19 20 21 22 23  
+24 25 26 27 28 29 30  
+31                    
+
+~/Castle/Main_tower/First_floor
+[mission 13] $ cal 2028
+                            2028
+      January               February               March          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5            1  2  3  4  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   5  6  7  8  9 10 11  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  12 13 14 15 16 17 18  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  19 20 21 22 23 24 25  
+23 24 25 26 27 28 29  27 28 29              26 27 28 29 30 31     
+30 31                                                             
+
+       April                  May                   June          
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1      1  2  3  4  5  6               1  2  3  
+ 2  3  4  5  6  7  8   7  8  9 10 11 12 13   4  5  6  7  8  9 10  
+ 9 10 11 12 13 14 15  14 15 16 17 18 19 20  11 12 13 14 15 16 17  
+16 17 18 19 20 21 22  21 22 23 24 25 26 27  18 19 20 21 22 23 24  
+23 24 25 26 27 28 29  28 29 30 31           25 26 27 28 29 30     
+30                                                                
+
+        July                 August              September        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+                   1         1  2  3  4  5                  1  2  
+ 2  3  4  5  6  7  8   6  7  8  9 10 11 12   3  4  5  6  7  8  9  
+ 9 10 11 12 13 14 15  13 14 15 16 17 18 19  10 11 12 13 14 15 16  
+16 17 18 19 20 21 22  20 21 22 23 24 25 26  17 18 19 20 21 22 23  
+23 24 25 26 27 28 29  27 28 29 30 31        24 25 26 27 28 29 30  
+30 31                                                             
+
+      October               November              December        
+Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  Su Mo Tu We Th Fr Sa  
+ 1  2  3  4  5  6  7            1  2  3  4                  1  2  
+ 8  9 10 11 12 13 14   5  6  7  8  9 10 11   3  4  5  6  7  8  9  
+15 16 17 18 19 20 21  12 13 14 15 16 17 18  10 11 12 13 14 15 16  
+22 23 24 25 26 27 28  19 20 21 22 23 24 25  17 18 19 20 21 22 23  
+29 30 31              26 27 28 29 30        24 25 26 27 28 29 30  
+                                            31                    
+
+~/Castle/Main_tower/First_floor
+[mission 13] $ gsh check
+What was the day of the week for the 09-16-2028?
+  1 : Monday
+  2 : Tuesday
+  3 : Wednesday
+  4 : Thursday
+  5 : Friday
+  6 : Saturday
+  7 : Sunday
+Your answer: 6
+
+Congratulations, mission 13 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ gsh goal
+
+  .------------------------------------------------------------------------------------------------.
+ /  .-.                                                                                        .-.  \
+|  /   \                                                                                      /   \  |
+| |\_.  |   Mission goal                                                                     |    /| |
+|\|  | /|   ============                                                                     |\  | |/|
+| `---' |                                                                                    | `---' |
+|       |   Checking for hidden files is taking too long!                                    |       |
+|       |                                                                                    |       |
+|       |   Create an alias "la" to run the command ``ls -A`` in order to list all files,    |       |
+|       |   including hidden ones, with only 2 letters.                                      |       |
+|       |                                                                                    |       |
+|       |   Define the synonym                                                               |       |
+|       |                                                                                    |       |
+|       |   la                                                                               |       |
+|       |                                                                                    |       |
+|       |   for the command                                                                  |       |
+|       |                                                                                    |       |
+|       |   ls -A                                                                            |       |
+|       |                                                                                    |       |
+|       |   and check that it works as expected.                                             |       |
+|       |                                                                                    |       |
+|       |   How fortunate, there is a nice rock hidden just where you are.                   |       |
+|       |                                                                                    |       |
+|       |                                                                                    |       |
+|       |   Useful commands                                                                  |       |
+|       |   ===============                                                                  |       |
+|       |                                                                                    |       |
+|       |   alias STRING='COMMAND'                                                           |       |
+|       |   Create a synonym for a string, that will stand for a command.                    |       |
+|       |                                                                                    |       |
+|       |------------------------------------------------------------------------------------|       |
+\       |                                                                                    |       /
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias la ls -a
+bash: alias: la: not found
+alias ls='ls --literal -p'
+bash: alias: -a: not found
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias la ls -A
+bash: alias: la: not found
+alias ls='ls --literal -p'
+bash: alias: -A: not found
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias ls=ls -A
+bash: alias: -A: not found
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias ls='ls -A'
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ la
+la: command not found
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ ls
+.nice_rock  painting_MjqjoHDB  painting_tYykSuEm  painting_vjyYqTjS  Second_floor
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ gsh reset
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias ls='ls -A'
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ gsh reset
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ alias la='ls -A'
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ la
+.nice_rock  painting_MjqjoHDB  painting_tYykSuEm  painting_vjyYqTjS  Second_floor
+
+~/Castle/Main_tower/First_floor
+[mission 14] $ gsh check
+
+Congratulations, mission 14 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 15] $ gsh goal
+
+     _____________________________________________________________________________________
+()==(                                                                                    (@==()
+     '____________________________________________________________________________________'|
+       |                                                                                   |
+       | Mission goal                                                                      |
+       | ============                                                                      |
+       |                                                                                   |
+       | Create a file named "journal.txt" in your chest and write a short message in it.  |
+       | You can use this file to record your notes and solutions for the upcoming         |
+       | missions.                                                                         |
+       |                                                                                   |
+       | Details                                                                           |
+       | -------                                                                           |
+       |                                                                                   |
+       | ``nano`` is a command-line text editor. You can use it whenever you need to edit  |
+       | a file from the shell.                                                            |
+       |                                                                                   |
+       |                                                                                   |
+       | Useful commands                                                                   |
+       | ===============                                                                   |
+       |                                                                                   |
+       | nano FILE                                                                         |
+       | Edit the file from the shell.                                                     |
+       | (If the file does not exist, it will be created.)                                 |
+       |                                                                                   |
+       | Keybindings are listed at the bottom of the screen (the "^" symbol means          |
+       | "Control"). The most important ones are:                                          |
+       |     Control-x     quit                                                            |
+       |     Control-o     save                                                            |
+       |     Control-w     search for a string                                             |
+       |                                                                                   |
+       | Remark: do not use Control-s or Control-z!                                        |
+     __)___________________________________________________________________________________|
+()==(                                                                                     (@==()
+     '------------------------------------------------------------------------------------'
+
+
+~/Castle/Main_tower/First_floor
+[mission 15] $ nano journal.txt
+
+~/Castle/Main_tower/First_floor
+[mission 15] $ gsh check
+The file '/home/kali/gameshell/World/Forest/Hut/Chest/journal.txt' doesn't exist...
+
+Sorry, mission 15 hasn't been completed.
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Main_tower/First_floor
+[mission 15] $ ls
+.nice_rock  painting_MjqjoHDB  painting_tYykSuEm  painting_vjyYqTjS  Second_floor
+
+~/Castle/Main_tower/First_floor
+[mission 15] $ cd
+
+~
+[mission 15] $ ls
+.bashrc  Castle  Forest  Garden  .lesshst  .local  Mountain  Stall
+
+~
+[mission 15] $ cd Forest/
+
+~/Forest
+[mission 15] $ cd Hut/
+
+~/Forest/Hut
+[mission 15] $ cd Chest/
+
+~/Forest/Hut/Chest
+[mission 15] $ nano journal.txt
+
+~/Forest/Hut/Chest
+[mission 15] $ gsh check
+
+Congratulations, mission 15 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Forest/Hut/Chest
+[mission 16] $ gsh goal
+
+     _________________________________________________________________________________________
+    /\                                                                                        \
+(O)===)><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><)==(O)
+    \/''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''/
+    (                                                                                        (
+     )  Mission goal                                                                          )
+    (   ============                                                                         (
+     )                                                                                        )
+    (   Create an alias "journal" in order to easily edit your journal file wherever you     (
+     )  are.                                                                                  )
+    (                                                                                        (
+     )                                                                                        )
+    (   Details                                                                              (
+     )  -------                                                                               )
+    (                                                                                        (
+     )  To edit the journal file with ``nano`` from, for example, the cellar or the throne    )
+    (   room, you need to give the full path to the file: "~/Forest/.../journal.txt".        (
+     )                                                                                        )
+    (   To avoid typing this long command each time, you can create an alias just like       (
+     )                                                                                        )
+    (   alias la='ls -a'                                                                     (
+     )                                                                                        )
+    (                                                                                        (
+     )  Useful commands                                                                       )
+    (   ===============                                                                      (
+     )                                                                                        )
+    (   nano FILE                                                                            (
+     )  Edit the file from the shell.                                                         )
+    (   (If the file does not exist, it will be created.)                                    (
+     )                                                                                        )
+    (   alias STRING='COMMAND'                                                               (
+     )  Create a synonym for a string, that will stand for a command.                         )
+    (                                                                                        (
+     )                                                                                        )
+    (   Note                                                                                 (
+     )  ----                                                                                  )
+    (                                                                                        (
+     )  If (and only if) you know what you're doing, you can use the ``EDITOR`` variable      )
+    (   to define your favorite editor and use it in the alias.                              (
+     )                                                                                        )
+    (                                                                                        (
+    /\''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''\
+(O)===)><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><)==(O)
+    \/________________________________________________________________________________________/
+
+
+┌──(kali㉿kali)-[~]
+└─$ bash gameshell.sh
+Warning: there is a more recent savefile
+You can
+  (1) keep the given file (gameshell.sh)
+  (2) switch to the last savefile (gameshell-save.sh)
+  (3) abort
+
+What do you want to do? [123] 2
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~
+[mission 17] $ gsh goal
+
+     _____________________________________________________________________________________
+()==(                                                                                    (@==()
+     '____________________________________________________________________________________'|
+       |                                                                                   |
+       | Mission goal                                                                      |
+       | ============                                                                      |
+       |                                                                                   |
+       | At the back of the cellar, there is a small opening going to the spider queen's   |
+       | lair.                                                                             |
+       | Go there, and remove the spider queen (and nothing else).                         |
+       |                                                                                   |
+       |                                                                                   |
+       | Note: you have a limited amount of time (20 seconds) to do that. You can use the  |
+       | command ``gsh reset`` to reset the timer.                                         |
+       |                                                                                   |
+       | Another thing: shell patterns have been deactivated. You cannot use the           |
+       | wildcards ``*`` or ``?``.                                                         |
+       |                                                                                   |
+       |                                                                                   |
+       | Useful commands                                                                   |
+       | ===============                                                                   |
+       |                                                                                   |
+       | Tab                                                                               |
+       | The "Tabulation" key completes the name of a file or directory once you have      |
+       | typed the beginning of its name. This only works                                  |
+       | if there is only one possible completion.                                         |
+       |                                                                                   |
+       | Tab-Tab                                                                           |
+       | Pressing the "Tabulation" key twice successively shows a list of possible         |
+       | completions.                                                                      |
+     __)___________________________________________________________________________________|
+()==(                                                                                     (@==()
+
+~
+[mission 17] $ pwd
+/home/kali/gameshell/World
+
+~
+[mission 17] $ ls
+Castle/  Forest/  Garden/  Mountain/  Stall/
+
+~
+[mission 17] $ cd Castle/
+
+~/Castle
+[mission 17] $ ls
+Cellar/  Great_hall/  Main_building/  Main_tower/  Observatory/
+
+~/Castle
+[mission 17] $ cd Cellar/
+
+~/Castle/Cellar
+[mission 17] $ ls
+10835_bat_4  31268_bat_2  4891_bat_5  8073_bat_1  8342_bat_3  barrel_of_apples
+
+~/Castle/Cellar
+[mission 17] $ ls -la
+total 56
+drwxr-xr-x 3 kali kali 4096 Dec 17 16:10 ./
+drwxr-xr-x 7 kali kali 4096 Dec 15 13:42 ../
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 10835_bat_4
+-rw-r--r-- 1 kali kali  239 Dec 15 14:04 .24656_bat_4
+-rw-r--r-- 1 kali kali  239 Dec 15 14:04 .27758_bat_3
+-rw-r--r-- 1 kali kali  192 Dec 15 14:01 31268_bat_2
+-rw-r--r-- 1 kali kali  258 Dec 15 14:04 .4084_bat_5
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 4891_bat_5
+-rw-r--r-- 1 kali kali  196 Dec 15 14:04 .7453_bat_2
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 8073_bat_1
+-rw-r--r-- 1 kali kali  211 Dec 15 14:01 8342_bat_3
+-rw-r--r-- 1 kali kali  258 Dec 15 14:04 .9775_bat_1
+-rw-r--r-- 1 kali kali  121 Dec 15 13:43 barrel_of_apples
+drwxr-xr-x 2 kali kali 4096 Dec 17 16:10 .Lair_of_the_spider_queen nPVBfDiLvfojcZIo xKaFkIlUaChORoNu/
+
+~/Castle/Cellar
+[mission 17] $ cd .Lair_of_the_spider_queen\ nPVBfDiLvfojcZIo xKaFkIlUaChORoNu/
+
+~/Castle/Cellar/.Lair_of_the_spider_queen nPVBfDiLvfojcZIo xKaFkIlUaChORoNu
+[mission 17] $ ls
+NXNTecfHSPCatDqj_baby_bat_kNzkaYzSfWphpzZt  vfNwUWPhbovcFVBy_spider_queen_SGHhOQbYZEGpQNFE
+
+~/Castle/Cellar/.Lair_of_the_spider_queen nPVBfDiLvfojcZIo xKaFkIlUaChORoNu
+[mission 17] $ rm vfNwUWPhbovcFVBy_spider_queen_SGHhOQbYZEGpQNFE 
+
+~/Castle/Cellar/.Lair_of_the_spider_queen nPVBfDiLvfojcZIo xKaFkIlUaChORoNu
+[mission 17] $ gsh check
+Good, but you took 509 seconds. You needed to take less than 20 seconds...
+
+Sorry, mission 17 hasn't been completed.
+                                                                                                              
+You are back in the cellar.
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 17] $ gsh reset
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 17] $ pwd
+/home/kali/gameshell/World/Castle/Cellar
+
+~/Castle/Cellar
+[mission 17] $ cd .
+./
+../
+.24656_bat_4
+.27758_bat_3
+.4084_bat_5
+.7453_bat_2
+.9775_bat_1
+.Lair_of_the_spider_queen mXkvhUffSwgUWOKS JypllxXcpqvFWHbH/
+
+~/Castle/Cellar
+[mission 17] $ cd .Lair_of_the_spider_queen\ mXkvhUffSwgUWOKS JypllxXcpqvFWHbH/
+
+~/Castle/Cellar/.Lair_of_the_spider_queen mXkvhUffSwgUWOKS JypllxXcpqvFWHbH
+[mission 17] $ rm 
+AJiWPHcDwmCaicrs_spider_queen_KdXxAVsuFoTKlOMH  SxUjwYiccMzSyRsN_baby_bat_qzNQrwnXQTjDbvla
+
+~/Castle/Cellar/.Lair_of_the_spider_queen mXkvhUffSwgUWOKS JypllxXcpqvFWHbH
+[mission 17] $ rm AJiWPHcDwmCaicrs_spider_queen_KdXxAVsuFoTKlOMH 
+
+~/Castle/Cellar/.Lair_of_the_spider_queen mXkvhUffSwgUWOKS JypllxXcpqvFWHbH
+[mission 17] $ gsh goal
+
+      _____________________________________________________________________________________
+    / \                                                                                    \.
+   |   | Mission goal                                                                      |.
+    \_ | ============                                                                      |.
+       |                                                                                   |.
+       | At the back of the cellar, there is a small opening going to the spider queen's   |.
+       | lair.                                                                             |.
+       | Go there, and remove the spider queen (and nothing else).                         |.
+       |                                                                                   |.
+       |                                                                                   |.
+       | Note: you have a limited amount of time (20 seconds) to do that. You can use the  |.
+       | command ``gsh reset`` to reset the timer.                                         |.
+       |                                                                                   |.
+       | Another thing: shell patterns have been deactivated. You cannot use the           |.
+       | wildcards ``*`` or ``?``.                                                         |.
+       |                                                                                   |.
+       |                                                                                   |.
+       | Useful commands                                                                   |.
+       | ===============                                                                   |.
+       |                                                                                   |.
+       | Tab                                                                               |.
+       | The "Tabulation" key completes the name of a file or directory once you have      |.
+       | typed the beginning of its name. This only works                                  |.
+       | if there is only one possible completion.                                         |.
+       |                                                                                   |.
+       | Tab-Tab                                                                           |.
+       | Pressing the "Tabulation" key twice successively shows a list of possible         |.
+       | completions.                                                                      |.
+       |   ________________________________________________________________________________|___
+       |  /                                                                                   /.
+       \_/___________________________________________________________________________________/.
+
+
+~/Castle/Cellar/.Lair_of_the_spider_queen mXkvhUffSwgUWOKS JypllxXcpqvFWHbH
+[mission 17] $ gsh check
+Good, but you took 50 seconds. You needed to take less than 20 seconds...
+
+Sorry, mission 17 hasn't been completed.
+                                                                                                              
+You are back in the cellar.
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 17] $ gsh reset
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar
+[mission 17] $ pwd
+/home/kali/gameshell/World/Castle/Cellar
+
+~/Castle/Cellar
+[mission 17] $ cd .
+./
+../
+.24656_bat_4
+.27758_bat_3
+.4084_bat_5
+.7453_bat_2
+.9775_bat_1
+.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd/
+
+~/Castle/Cellar
+[mission 17] $ cd .Lair_of_the_spider_queen\ wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd/
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 17] $ rm 
+HMZcLWEplFifxXEZ_spider_queen_IHbUmFOEvyyjRxOs  rjHAsZxUpdxLOqPW_baby_bat_ujWtNAHnvafolHrK
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 17] $ rm HMZcLWEplFifxXEZ_spider_queen_IHbUmFOEvyyjRxOs 
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 17] $ gsh check
+Perfect, it took you only 17 seconds to complete this mission!
+
+Congratulations, mission 17 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ gsh goal
+
+  ________________________________________________________________________________________________
+ /  __                                                                                        __  \
+|  /  \   Mission goal                                                                       /  \  |
+|\ \   |  ============                                                                      |   / /|
+| \___/|                                                                                    |\___/ |
+|      |  As you are walking around the castle, you feel like you are being watched...      |      |
+|      |  Turn your head quickly enough and you may see one of the paintings' eyes          |      |
+|      |  following you.                                                                    |      |
+|      |                                                                                    |      |
+|      |  1/ Run the ``xeyes`` command, and stop it.                                        |      |
+|      |  2/ Run the ``xeyes`` command in the background.                                   |      |
+|      |                                                                                    |      |
+|      |                                                                                    |      |
+|      |  Useful commands                                                                   |      |
+|      |  ===============                                                                   |      |
+|      |                                                                                    |      |
+|      |  xeyes                                                                             |      |
+|      |  Open a window with 2 eyes that track your mouse.                                  |      |
+|      |                                                                                    |      |
+|      |  COMMAND &                                                                         |      |
+|      |  Run the command in the background.                                                |      |
+|      |                                                                                    |      |
+|      |  Control-c                                                                         |      |
+|      |  This key binding usually interrupts the current command by sending it the "INT"   |      |
+|      |  signal.                                                                           |      |
+|      |                                                                                    |      |
+ \     |____________________________________________________________________________________|     /
+  \___/                                                                                      \___/
+
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ pwd
+/home/kali/gameshell/World/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ xeyes
+^C
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ &xeyes
+bash: syntax error near unexpected token `&'
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ & xeyes
+bash: syntax error near unexpected token `&'
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ &xeyes
+bash: syntax error near unexpected token `&'
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ xeyes
+^C
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ xeyes&
+[1] 11082
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 18] $ gsh check
+
+Congratulations, mission 18 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 19] $ gsh goal
+
+  .-------------------------------------------------------------------------------------------------.
+ /  .-.                                                                                         .-.  \
+|  /   \                                                                                       /   \  |
+| |\_.  |   Mission goal                                                                      |    /| |
+|\|  | /|   ============                                                                      |\  | |/|
+| `---' |                                                                                     | `---' |
+|       |   Find the copper coin in the small maze in the garden and move it to your chest.   |       |
+|       |                                                                                     |       |
+|       |   If you want, you can use a graphical file manager. The maze is to be found in     |       |
+|       |   directory                                                                         |       |
+|       |   /home/kali/gameshell/World/Garden/Maze                                            |       |
+|       |                                                                                     |       |
+|       |-------------------------------------------------------------------------------------|       |
+\       |                                                                                     |       /
+ \     /                                                                                       \     /
+  `---'                                                                                         `---'
+
+
+~/Castle/Cellar/.Lair_of_the_spider_queen wnjcPwHvfIckaKIy UvkJJSYiRvtygUMd
+[mission 19] $ cd /home/kali/gameshell/World/Garden/Maze
+
+~/Garden/Maze
+[mission 19] $ ls
+51ce2236951f4e91b00ecc8c0b/  dea5cb0938988ab66a/
+
+~/Garden/Maze
+[mission 19] $ la /l
+ls: cannot access '/l': No such file or directory
+
+~/Garden/Maze
+[mission 19] $ ls -l
+total 8
+drwxr-xr-x 4 kali kali 4096 Dec 17 16:25 51ce2236951f4e91b00ecc8c0b/
+drwxr-xr-x 4 kali kali 4096 Dec 17 16:25 dea5cb0938988ab66a/
+
+~/Garden/Maze
+[mission 19] $ cat 51ce2236951f4e91b00ecc8c0b/
+cat: 51ce2236951f4e91b00ecc8c0b/: Is a directory
+
+~/Garden/Maze
+[mission 19] $ cd 51ce2236951f4e91b00ecc8c0b/
+
+~/Garden/Maze/51ce2236951f4e91b00ecc8c0b
+[mission 19] $ ls
+37c8d1374c8925a/  9110a9478e148f4ee4cf3583109d/
+
+~/Garden/Maze/51ce2236951f4e91b00ecc8c0b
+[mission 19] $ cd ..
+
+~/Garden/Maze
+[mission 19] $ ls
+51ce2236951f4e91b00ecc8c0b/  dea5cb0938988ab66a/
+
+~/Garden/Maze
+[mission 19] $ pwd
+/home/kali/gameshell/World/Garden/Maze
+
+~/Garden/Maze
+[mission 19] $ ls -la
+total 16
+drwxr-xr-x 4 kali kali 4096 Dec 17 16:25 ./
+drwxr-xr-x 5 kali kali 4096 Dec 15 14:00 ../
+drwxr-xr-x 4 kali kali 4096 Dec 17 16:25 51ce2236951f4e91b00ecc8c0b/
+drwxr-xr-x 4 kali kali 4096 Dec 17 16:25 dea5cb0938988ab66a/
+
+~/Garden/Maze
+[mission 19] $ cp /home/kali/gameshell/World/Garden/Maze/dea5cb0938988ab66a/8062a3b1a61b0d51bd028ed6f/59a4759e07b/OOOOO_copper_coin_OOOOO ~/Forest/Hut/Chest
+
+~/Garden/Maze
+[mission 19] $ gsh check
+There still are some copper coins in the maze!
+
+Sorry, mission 19 hasn't been completed.
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden/Maze
+[mission 19] $ gsh reset
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden/Maze
+[mission 19] $ mv /home/kali/gameshell/World/Garden/Maze/dea5cb0938988ab66a/8062a3b1a61b0d51bd028ed6f/59a4759e07b/OOOOO_copper_coin_OOOOO ~/Forest/Hut/Chest
+mv: cannot stat '/home/kali/gameshell/World/Garden/Maze/dea5cb0938988ab66a/8062a3b1a61b0d51bd028ed6f/59a4759e07b/OOOOO_copper_coin_OOOOO': No such file or directory
+
+~/Garden/Maze
+[mission 19] $ mv /home/kali/gameshell/World/Garden/Maze/2a1864a56b325d9c0f8524ff/1ba648f1d80b28/9f0c9e733231adca5c490c4da8b71a9/OOOOO_copper_coin_OOOOO ~/Forest/Hut/Chest
+
+~/Garden/Maze
+[mission 19] $ gsh check
+
+Congratulations, mission 19 has been successfully completed!
+                                                                                                              
+
+
+                 _.--.           Congratulations!
+             _.-'_:-'||          
+         _.-'_.-::::'||          From now on, the command ``ls`` will try using a color code to make it 
+    _.-:'_.-::::::'  ||          easier to differentiate between directories and several kinds of files.
+  .'`-.-:::::::'     ||          
+ /.'`;|:::::::'      ||_         
+||   ||::::::'     _.;._'-._     
+||   ||:::::'  _.-!oo @.!-._'-.  
+\'.  ||:::::.-!()oo @!()@.-'_.|  
+ '.'-;|:.-'.&$@.& ()$%-'o.'\U||  
+   `>'-.!@%()@'@_%-'_.-o _.|'||  
+ jgs||-._'-.@.-'_.-' _.-o  |'||  
+    ||=[ '-._.-\U/.-'    o |'||  
+    || '-.]=|| |'|      o  |'||  
+    ||      || |'|        _| ';  
+    ||      || |'|    _.-'_.-'   
+    |'-._   || |'|_.-'_.-'       
+     '-._'-.|| |' `_.-'          
+         '-.||_/.-'              
+
+
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden/Maze
+[mission 20] $ 
+~/Garden/Maze
+[mission 20] $ gsh goal
+
+      ___________________________________________________________________________________
+    / \                                                                                  \.
+   |   | Mission goal                                                                    |.
+    \_ | ============                                                                    |.
+       |                                                                                 |.
+       | Find the silver coin in the maze in the garden and move it to your chest using  |.
+       | the shell.                                                                      |.
+       |                                                                                 |.
+       |                                                                                 |.
+       | Useful commands                                                                 |.
+       | ===============                                                                 |.
+       |                                                                                 |.
+       | ls -R                                                                           |.
+       | Print the list of all files / directory, including those in sub-directories     |.
+       | (recursively).                                                                  |.
+       |                                                                                 |.
+       | tree                                                                            |.
+       | Print the tree of files and directories, starting from the current working      |.
+       | directory.                                                                      |.
+       |   ______________________________________________________________________________|___
+       |  /                                                                                 /.
+       \_/_________________________________________________________________________________/.
+
+
+~/Garden/Maze
+[mission 20] $ ls -R
+.:
+090a29e28912f25916a1dc1d5/  3867ccf5075d265f31e/  af1ff3ffa76/
+
+./090a29e28912f25916a1dc1d5:
+0ae6737b0ebdbb/  0be0382392b191b338c8ff72b8/  704189ee9095e72b0b834/
+
+./090a29e28912f25916a1dc1d5/0ae6737b0ebdbb:
+28b6a3bba8fe961e1e4d3e5d1264/  326c8d5fa31f0475399b1/  947d4aae0ed2c2437e0e0d2f/
+
+./090a29e28912f25916a1dc1d5/0ae6737b0ebdbb/28b6a3bba8fe961e1e4d3e5d1264:
+
+./090a29e28912f25916a1dc1d5/0ae6737b0ebdbb/326c8d5fa31f0475399b1:
+
+./090a29e28912f25916a1dc1d5/0ae6737b0ebdbb/947d4aae0ed2c2437e0e0d2f:
+
+./090a29e28912f25916a1dc1d5/0be0382392b191b338c8ff72b8:
+9d1e084219d8948880e2/  cd02f60dd5cebb3e5ef524174/  e710e888/
+
+./090a29e28912f25916a1dc1d5/0be0382392b191b338c8ff72b8/9d1e084219d8948880e2:
+
+./090a29e28912f25916a1dc1d5/0be0382392b191b338c8ff72b8/cd02f60dd5cebb3e5ef524174:
+
+./090a29e28912f25916a1dc1d5/0be0382392b191b338c8ff72b8/e710e888:
+
+./090a29e28912f25916a1dc1d5/704189ee9095e72b0b834:
+0acd701f46ed643d8f30296afea/  17c4c0a81764664a3/  594576b3c4633da0a2/
+
+./090a29e28912f25916a1dc1d5/704189ee9095e72b0b834/0acd701f46ed643d8f30296afea:
+
+./090a29e28912f25916a1dc1d5/704189ee9095e72b0b834/17c4c0a81764664a3:
+
+./090a29e28912f25916a1dc1d5/704189ee9095e72b0b834/594576b3c4633da0a2:
+
+./3867ccf5075d265f31e:
+f41ae8d8e0e277/  f46e9377/  ff81982627e81612f8b48/
+
+./3867ccf5075d265f31e/f41ae8d8e0e277:
+9fb134bde21ddcc85fe50c873ca8b/  de910330363b48c7c8167/  efd5e90c3d48f7cfa/
+
+./3867ccf5075d265f31e/f41ae8d8e0e277/9fb134bde21ddcc85fe50c873ca8b:
+OOOOO_silver_coin_OOOOO
+
+./3867ccf5075d265f31e/f41ae8d8e0e277/de910330363b48c7c8167:
+
+./3867ccf5075d265f31e/f41ae8d8e0e277/efd5e90c3d48f7cfa:
+
+./3867ccf5075d265f31e/f46e9377:
+0186bd95/  78b1906778bb7e4d/  f9e802b4b6bd2f9/
+
+./3867ccf5075d265f31e/f46e9377/0186bd95:
+
+./3867ccf5075d265f31e/f46e9377/78b1906778bb7e4d:
+
+./3867ccf5075d265f31e/f46e9377/f9e802b4b6bd2f9:
+
+./3867ccf5075d265f31e/ff81982627e81612f8b48:
+359d5a48729b5d1dff/  8ceca667d99fec482057f3/  d85a080332e1431d7c82d7aa9b00/
+
+./3867ccf5075d265f31e/ff81982627e81612f8b48/359d5a48729b5d1dff:
+
+./3867ccf5075d265f31e/ff81982627e81612f8b48/8ceca667d99fec482057f3:
+
+./3867ccf5075d265f31e/ff81982627e81612f8b48/d85a080332e1431d7c82d7aa9b00:
+
+./af1ff3ffa76:
+4f588bdc4f06d8/  74e132e1ad38a58fc53b6da604598/  fe144e309e/
+
+./af1ff3ffa76/4f588bdc4f06d8:
+2a34cc84330d9b436ce8b9/  51ef2709d6abe4f43d0a9e/  f9e3e16b1a63f823c9fb84bf/
+
+./af1ff3ffa76/4f588bdc4f06d8/2a34cc84330d9b436ce8b9:
+
+./af1ff3ffa76/4f588bdc4f06d8/51ef2709d6abe4f43d0a9e:
+
+./af1ff3ffa76/4f588bdc4f06d8/f9e3e16b1a63f823c9fb84bf:
+
+./af1ff3ffa76/74e132e1ad38a58fc53b6da604598:
+30aebfd617b71b89a79de5e65c0f/  5623aaf9c6ebf9af23ddbfc00d6c0b1/  8a2d20db386d9bb96d9c3d1668/
+
+./af1ff3ffa76/74e132e1ad38a58fc53b6da604598/30aebfd617b71b89a79de5e65c0f:
+
+./af1ff3ffa76/74e132e1ad38a58fc53b6da604598/5623aaf9c6ebf9af23ddbfc00d6c0b1:
+
+./af1ff3ffa76/74e132e1ad38a58fc53b6da604598/8a2d20db386d9bb96d9c3d1668:
+
+./af1ff3ffa76/fe144e309e:
+a27fe9a21aa476/  b0960cbb576838eb4c8d66b/  fd3d9e781a86b8394a9c1a76be9/
+
+./af1ff3ffa76/fe144e309e/a27fe9a21aa476:
+
+./af1ff3ffa76/fe144e309e/b0960cbb576838eb4c8d66b:
+
+./af1ff3ffa76/fe144e309e/fd3d9e781a86b8394a9c1a76be9:
+
+~/Garden/Maze
+[mission 20] $ tree
+.
+├── 090a29e28912f25916a1dc1d5
+│   ├── 0ae6737b0ebdbb
+│   │   ├── 28b6a3bba8fe961e1e4d3e5d1264
+│   │   ├── 326c8d5fa31f0475399b1
+│   │   └── 947d4aae0ed2c2437e0e0d2f
+│   ├── 0be0382392b191b338c8ff72b8
+│   │   ├── 9d1e084219d8948880e2
+│   │   ├── cd02f60dd5cebb3e5ef524174
+│   │   └── e710e888
+│   └── 704189ee9095e72b0b834
+│       ├── 0acd701f46ed643d8f30296afea
+│       ├── 17c4c0a81764664a3
+│       └── 594576b3c4633da0a2
+├── 3867ccf5075d265f31e
+│   ├── f41ae8d8e0e277
+│   │   ├── 9fb134bde21ddcc85fe50c873ca8b
+│   │   │   └── OOOOO_silver_coin_OOOOO
+│   │   ├── de910330363b48c7c8167
+│   │   └── efd5e90c3d48f7cfa
+│   ├── f46e9377
+│   │   ├── 0186bd95
+│   │   ├── 78b1906778bb7e4d
+│   │   └── f9e802b4b6bd2f9
+│   └── ff81982627e81612f8b48
+│       ├── 359d5a48729b5d1dff
+│       ├── 8ceca667d99fec482057f3
+│       └── d85a080332e1431d7c82d7aa9b00
+└── af1ff3ffa76
+    ├── 4f588bdc4f06d8
+    │   ├── 2a34cc84330d9b436ce8b9
+    │   ├── 51ef2709d6abe4f43d0a9e
+    │   └── f9e3e16b1a63f823c9fb84bf
+    ├── 74e132e1ad38a58fc53b6da604598
+    │   ├── 30aebfd617b71b89a79de5e65c0f
+    │   ├── 5623aaf9c6ebf9af23ddbfc00d6c0b1
+    │   └── 8a2d20db386d9bb96d9c3d1668
+    └── fe144e309e
+        ├── a27fe9a21aa476
+        ├── b0960cbb576838eb4c8d66b
+        └── fd3d9e781a86b8394a9c1a76be9
+
+40 directories, 1 file
+~/Garden/Maze
+[mission 20] $ mv ./3867ccf5075d265f31e/f41ae8d8e0e277/9fb134bde21ddcc85fe50c873ca8b/OOOOO_silver_coin_OOOOO ~/Forest/Hut/Chest
+
+~/Garden/Maze
+[mission 20] $ gsh check
+
+Congratulations, mission 20 has been successfully completed!
+                                                                                                              
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Garden/Maze
+[mission 21] $ gsh goal
+                                                                                                                                                                                                                                            
+  _______________________________________________________________________________________________________________________________________________                                                                                           
+ /  __                                                                                                                                       __  \                                                                                          
+|  /  \   Mission goal                                                                                                                      /  \  |
+|\ \   |  ============                                                                                                                     |   / /|
+| \___/|                                                                                                                                   |\___/ |
+|      |  Find the gold coins in the maze hidden in the garden and move them to your chest.                                                |      |
+|      |                                                                                                                                   |      |
+|      |                                                                                                                                   |      |
+|      |  Useful commands                                                                                                                  |      |
+|      |  ===============                                                                                                                  |      |
+|      |                                                                                                                                   |      |
+|      |  find CONDITION                                                                                                                   |      |
+|      |  Search for files satisfying the condition, starting from your current working directory.                                         |      |
+|      |                                                                                                                                   |      |
+|      |  There are many possible conditions. They can constrain the                                                                       |      |
+|      |  file names, size, modification date, etc. For example -name "PATTERN"                                                            |      |
+|      |  -iname "PATTERN"                                                                                                                 |      |
+|      |  are both related to file names.                                                                                                  |      |
+|      |                                                                                                                                   |      |
+|      |  man COMMAND                                                                                                                      |      |
+|      |  Display the manual of the command.                                                                                               |      |
+|      |                                                                                                                                   |      |
+|      |  Important key bindings:                                                                                                          |      |
+|      |      q           quit                                                                                                             |      |
+|      |      Space       scroll down one page                                                                                             |      |
+|      |  / STRING search for the string                                                                                                   |      |
+|      |      n           find the next occurrence of the                                                                                  |      |
+|      |  search string                                                                                                                    |      |
+|      |                                                                                                                                   |      |
+|      |  Remark                                                                                                                           |      |
+|      |  ------                                                                                                                           |      |
+|      |                                                                                                                                   |      |
+|      |  The description of the ``find`` command is deliberately kept short. You will find more information in the manual. (You can for   |      |
+|      |  exemple search for the string "-name" in the manual.)                                                                            |      |
+|      |            
+
+~/Garden/Maze
+[mission 21] $ find -iname "*gold*"
+./c7fdcff54d611fcf799630dc/79072dead14063702487a/65b0b2a153db929/gold_coin_1
+./9f9a0ab0ca47ed4/3d20f0ff5f4/430d3989/GolD_CoiN_2
+
+~/Garden/Maze
+[mission 21] $ mv ./c7fdcff54d611fcf799630dc/79072dead14063702487a/65b0b2a153db929/gold_coin_1 ~/Forest/Hut/Chest
+
+~/Garden/Maze
+[mission 21] $ mv ./9f9a0ab0ca47ed4/3d20f0ff5f4/430d3989/GolD_CoiN_2 ~/Forest/Hut/Chest
+
+~/Garden/Maze
+[mission 21] $ gsh check
+
+Congratulations, mission 21 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |    
+
+~/Garden/Maze
+[mission 22] $ gsh goal
+
+  _____________________________________________________________________________________________________________________________________________
+ /  __                                                                                                                                     __  \
+|  /  \   Mission goal                                                                                                                    /  \  |
+|\ \   |  ============                                                                                                                   |   / /|
+| \___/|                                                                                                                                 |\___/ |
+|      |  A forgetful old hermit called Servillus has set up camp in a cave with his old, leather-bound potion book.                     |      |
+|      |  Go to the cave and help him remember the recipe of his famous herbal tea.                                                      |      |
+|      |                                                                                                                                 |      |
+|      |  In order to validate the mission, you need to be in the cave with Servillus **and** your last command prior to ``gsh check``   |      |
+|      |  must show the recipe (including its title), but nothing else.                                                                  |      |
+|      |                                                                                                                                 |      |
+|      |  Note: you shouldn't alter the content of the book of potions.                                                                  |      |
+|      |                                                                                                                                 |      |
+|      |                                                                                                                                 |      |
+|      |  Useful commands                                                                                                                |      |
+|      |  ===============                                                                                                                |      |
+|      |                                                                                                                                 |      |
+|      |  cat FILE                                                                                                                       |      |
+|      |  Display the contents of the file.                                                                                              |      |
+|      |                                                                                                                                 |      |
+|      |  head FILE                                                                                                                      |      |
+|      |  Print the first 10 lines of the file.                                                                                          |      |
+|      |                                                                                                                                 |      |
+|      |  head -n K FILE                                                                                                                 |      |
+|      |  Print the first K lines of the file.                                                                                           |      |
+|      |                                                                                                                                 |      |
+|      |  Remark                                                                                                                         |      |
+|      |  ------                                                                                                                         |      |
+|      |                                                                                                                                 |      |
+|      |  A "FILE" may contain directories if the file in question is not in the current directory.                                      |      |
+|      |                                                                                                                                 |      |
+ \     |_________________________________________________________________________________________________________________________________|     /
+  \___/                                                                                                                                   \___/
+
+
+
+~/Garden/Maze
+[mission 22] $ cd ..
+
+~/Garden
+[mission 22] $ ls
+Flower_garden/  Maze/  Shed/
+
+~/Garden
+[mission 22] $ cd ..
+
+~
+[mission 22] $ ls
+Castle/  Forest/  Garden/  Mountain/  Stall/
+
+~
+[mission 22] $ cd Mountain/
+
+~/Mountain
+[mission 22] $ ls
+Cave/
+
+~/Mountain
+[mission 22] $ cd Cave
+
+~/Mountain/Cave
+[mission 22] $ ls
+Book_of_potions/  servillus
+
+~/Mountain/Cave
+[mission 22] $ cd Book_of_potions/
+
+~/Mountain/Cave/Book_of_potions
+[mission 22] $ ls
+page_01  page_02  page_03  page_04  page_05  page_06  page_07  page_08  page_09  page_10  page_11  page_12  page_13  table_of_contents
+
+~/Mountain/Cave/Book_of_potions
+[mission 22] $ cat table_of_contents 
+1. Transformation potion -------------------------- pages 1-2
+2. Elixir of youth -------------------------------- pages 3-4
+3. Philter of love ----------------------------------- page 5
+4. Bottled death (powerful poison) ------------------- page 6
+5. Herbal tea ---------------------------------------- page 7
+6. Draft of invisibility -------------------------- pages 7-8
+7. Homeopathic healing potion (part 1) ------------ pages 8-9
+8. Homeopathic healing potion (part 2) -------------- page 10
+9. Homeopathic healing potion (part 3) -------------- page 11
+10. Toadstool stew ---------------------------------- page 12
+11. Distilled water --------------------------------- page 13
+12. King's ale -------------------------------------- Page 13
+
+~/Mountain/Cave/Book_of_potions
+[mission 22] $ cd ..
+
+~/Mountain/Cave
+[mission 22] $ head -n 7 Book_of_potions/page_07
+Herbal tea
+----------
+
+1) Boil water.
+2) Add herbs from the forest.
+3) Let it sit for five minutes and drink while hot.
+
+
+~/Mountain/Cave
+[mission 22] $ gsh check
+
+Congratulations, mission 22 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~/Mountain/Cave
+[mission 23] $ gsh goal
+
+      ____________________________________________________________________________________________________________________________________
+    / \                                                                                                                                   \.
+   |   | Mission goal                                                                                                                     |.
+    \_ | ============                                                                                                                     |.
+       |                                                                                                                                  |.
+       | The old man seems to enjoy your company very much. He invites you to stay for supper, and starts preparing a delicious stew for  |.
+       | the both of you. While getting the cauldron ready he asks for your help.                                                         |.
+       | Read him the steps of the recipe from his book.                                                                                  |.
+       |                                                                                                                                  |.
+       | In order to validate the mission, you need to be in the cave with Servillus **and** last command prior to ``gsh check`` must     |.
+       | show the steps of the recipe (without its title).                                                                                |.
+       |                                                                                                                                  |.
+       | Note: you shouldn't alter the content of the book of potions.                                                                    |.
+       |                                                                                                                                  |.
+       |                                                                                                                                  |.
+       | Useful commands                                                                                                                  |.
+       | ===============                                                                                                                  |.
+       |                                                                                                                                  |.
+       | cat FILE                                                                                                                         |.
+       | Display the contents of the file.                                                                                                |.
+       |                                                                                                                                  |.
+       | tail FILE                                                                                                                        |.
+       | Print the last 10 lines of the file.                                                                                             |.
+       |                                                                                                                                  |.
+       | tail -n K FILE                                                                                                                   |.
+       | Print the last K lines of the file.                                                                                              |.
+       |   _______________________________________________________________________________________________________________________________|___
+       |  /                                                                                                                                  /.
+       \_/__________________________________________________________________________________________________________________________________/.
+
+
+~/Mountain/Cave
+[mission 23] $ cd Book_of_potions/
+
+~/Mountain/Cave/Book_of_potions
+[mission 23] $ ls
+page_01  page_02  page_03  page_04  page_05  page_06  page_07  page_08  page_09  page_10  page_11  page_12  page_13  table_of_contents
+
+~/Mountain/Cave/Book_of_potions
+[mission 23] $ cat table_of_contents 
+1. Transformation potion -------------------------- pages 1-2
+2. Elixir of youth -------------------------------- pages 3-4
+3. Philter of love ----------------------------------- page 5
+4. Bottled death (powerful poison) ------------------- page 6
+5. Herbal tea ---------------------------------------- page 7
+6. Draft of invisibility -------------------------- pages 7-8
+7. Homeopathic healing potion (part 1) ------------ pages 8-9
+8. Homeopathic healing potion (part 2) -------------- page 10
+9. Homeopathic healing potion (part 3) -------------- page 11
+10. Toadstool stew ---------------------------------- page 12
+11. Distilled water --------------------------------- page 13
+12. King's ale -------------------------------------- Page 13
+
+~/Mountain/Cave/Book_of_potions
+[mission 23] $ cat page_12
+Toadstool stew
+--------------
+
+1) Boil water in a cauldron.
+2) Add in a few death caps (Amanita phalloides).
+3) Also add a few fly agarics (Amanita muscaria).
+4) And some destroying angels (Amanita virosa).
+5) Mix in a few deadly webcaps (Cortinarius rubellus).
+6) Feel free to add in any colourful fungi you have on hand.
+7) Let half of the water evaporate.
+8) Season with a pinch of salt and a few herbs.
+9) Serve hot in a bowl.
+
+~/Mountain/Cave/Book_of_potions
+[mission 23] $ cd ..
+
+~/Mountain/Cave
+[mission 23] $ tail -n 9 Book_of_potions/page_12
+1) Boil water in a cauldron.
+2) Add in a few death caps (Amanita phalloides).
+3) Also add a few fly agarics (Amanita muscaria).
+4) And some destroying angels (Amanita virosa).
+5) Mix in a few deadly webcaps (Cortinarius rubellus).
+6) Feel free to add in any colourful fungi you have on hand.
+7) Let half of the water evaporate.
+8) Season with a pinch of salt and a few herbs.
+9) Serve hot in a bowl.
+
+~/Mountain/Cave
+[mission 23] $ gsh check
+
+Congratulations, mission 23 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+~/Mountain/Cave
+[mission 24] $ gsh goal
+
+                                                                                                                                        .---.
+                                                                                                                                       /  .  \
+                                                                                                                                      |\_/|   |
+                                                                                                                                      |   |  /|
+  .-----------------------------------------------------------------------------------------------------------------------------------------' |
+ /  .-.                                                                                                                                       |
+|  /   \                                                                                                                                      |
+| |\_.  |   Mission goal                                                                                                                      |
+|\|  | /|   ============                                                                                                                      |
+| `---' |                                                                                                                                     |
+|       |   While cleaning the dishes, Servillus mentions an interesting potion that lets the drinker (temporarily) take the physical         |
+|       |   appearance of anyone.                                                                                                             |
+|       |   Read the recipe of the potion from the hermit's book.                                                                             |
+|       |                                                                                                                                     |
+|       |   In order to validate the mission, you need to be in the cave with Servillus **and** your last command prior to ``gsh check``      |
+|       |   must show the whole recipe (with its title).                                                                                      |
+|       |                                                                                                                                     |
+|       |   Note: you shouldn't alter the content of the book of potions.                                                                     |
+|       |                                                                                                                                     |
+|       |                                                                                                                                     |
+|       |   Useful commands                                                                                                                   |
+|       |   ===============                                                                                                                   |
+|       |                                                                                                                                     |
+|       |   cat FILE1 FILE2 ... FILEn                                                                                                         |
+|       |   Display the contents of the files in order.                                                                                       |
+|       |   Remark: ``cat`` is an abbreviation for "concatenate".                                                                             |
+|       |                                                                                                                                     |
+|       |                                                                                                                                    /
+|       |-----------------------------------------------------------------------------------------------------------------------------------'
+\       |                                                                                                                             
+ \     /                                                                                                                              
+  `---'                                                                                                                               
+
+~/Mountain/Cave
+[mission 24] $ cd Book_of_potions/
+
+~/Mountain/Cave/Book_of_potions
+[mission 24] $ cat table_of_contents 
+1. Transformation potion -------------------------- pages 1-2
+2. Elixir of youth -------------------------------- pages 3-4
+3. Philter of love ----------------------------------- page 5
+4. Bottled death (powerful poison) ------------------- page 6
+5. Herbal tea ---------------------------------------- page 7
+6. Draft of invisibility -------------------------- pages 7-8
+7. Homeopathic healing potion (part 1) ------------ pages 8-9
+8. Homeopathic healing potion (part 2) -------------- page 10
+9. Homeopathic healing potion (part 3) -------------- page 11
+10. Toadstool stew ---------------------------------- page 12
+11. Distilled water --------------------------------- page 13
+12. King's ale -------------------------------------- Page 13
+
+~/Mountain/Cave/Book_of_potions
+[mission 24] $ cd ..
+
+~/Mountain/Cave
+[mission 24] $ cat Book_of_potions/page_01 Book_of_potions/page_02
+Transformation potion
+---------------------
+
+1) Boil water in a cauldron.
+2) Add 3 measures of fluxweed to the cauldron.
+3) Add 2 bundles of knotgrass to the cauldron.
+4) Stir 4 times, clockwise.
+5) Wave your wand then let potion brew for 80 minutes.
+6) Add 4 leeches to the cauldron.
+7) Crush 2 scoops of lacewing flies to a fine paste.
+8) Add 2 measures of the crushed lacewings to the cauldron.
+9) Heat for 30 seconds on a low heat.
+10) Add 3 measures of boomslang skin to the cauldron.
+11) Crush a bicorn horn into a fine powder.
+12) Add 1 measure of the crushed horn to the cauldron.
+13) Heat for 20 seconds at a high temperature.
+14) Wave your wand then let potion brew for 24 hours.
+15) Add 1 additional scoop of lacewings to the cauldron.
+16) Stir 3 times, counter-clockwise.
+17) Split potion into multiple doses, if desired.
+18) Add a pieces of the person you wish to become.
+19) Wave your wand to complete the potion.
+
+~/Mountain/Cave
+[mission 24] $ gsh check
+
+Congratulations, mission 24 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |             
+~/Mountain/Cave
+[mission 25] $ gsh goal
+
+ __^__                                                                                                                                   __^__
+( ___ )---------------------------------------------------------------------------------------------------------------------------------( ___ )
+ |   |                                                                                                                                   |   |
+ | / |  Mission goal                                                                                                                     | \ |
+ | / |  ============                                                                                                                     | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  The old hermit notices your interest for potion recipes, and sees promise in your ability to lookup lists of ingredients. He     | \ |
+ | / |  challenges you to find the steps for the elixir of Youth.                                                                        | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  In order to validate the mission, you need to be in the cave with Servillus **and** your last command prior to ``gsh check``     | \ |
+ | / |  must show the steps for the recipe and nothing else.                                                                             | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  Note: you shouldn't alter the content of the book of potions.                                                                    | \ |
+ | / |                                                                                                                                   | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  Useful commands                                                                                                                  | \ |
+ | / |  ===============                                                                                                                  | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  cat FILE1 FILE2 ... FILEn                                                                                                        | \ |
+ | / |  Display the contents of the files in order.                                                                                      | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  tail                                                                                                                             | \ |
+ | / |  Print the last 10 lines sent on the standard input.                                                                              | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  tail -n K                                                                                                                        | \ |
+ | / |  Print the last K lines sent on the standard input.                                                                               | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  COMMAND1 | COMMAND2                                                                                                              | \ |
+ | / |  Run the two commands, feeding the "standard output" of the former into the "standard input" of the latter.                       | \ |
+ | / |  Remark: by analogy with plumbing "|" is called "pipe".                                                                           | \ |
+ | / |                                                                                                                                   | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  Explanations                                                                                                                     | \ |
+ | / |  ============                                                                                                                     | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  Many of Unix commands process text: they receive text as input and produce text as output.                                       | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  It is common for those commands to write their output to their "standard output", which means that (by default) the output is    | \ |
+ | / |  written into the terminal.                                                                                                       | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  Most of those commands can receive input either through files (given as arguments) or from their "standard input". For example:  | \ |
+ | / |  - ``head FILE`` reads its input from the file,                                                                                   | \ |
+ | / |  - ``head`` reads its input on the standard input.                                                                                | \ |
+ | / |                                                                                                                                   | \ |
+ | / |  By default, data from the standard input is read from the keyboard, but a pipe can change that.                                  | \ |
+ |___|                                                                                                                                   |___|
+(_____)---------------------------------------------------------------------------------------------------------------------------------(_____)
+
+~/Mountain/Cave
+[mission 25] $ cd Book_of_potions/
+
+~/Mountain/Cave/Book_of_potions
+[mission 25] $ cat table_of_contents 
+1. Transformation potion -------------------------- pages 1-2
+2. Elixir of youth -------------------------------- pages 3-4
+3. Philter of love ----------------------------------- page 5
+4. Bottled death (powerful poison) ------------------- page 6
+5. Herbal tea ---------------------------------------- page 7
+6. Draft of invisibility -------------------------- pages 7-8
+7. Homeopathic healing potion (part 1) ------------ pages 8-9
+8. Homeopathic healing potion (part 2) -------------- page 10
+9. Homeopathic healing potion (part 3) -------------- page 11
+10. Toadstool stew ---------------------------------- page 12
+11. Distilled water --------------------------------- page 13
+12. King's ale -------------------------------------- Page 13
+
+~/Mountain/Cave/Book_of_potions
+[mission 25] $ cat page_03 page_04
+Elixir of youth
+---------------
+
+Warning: **do not** drink if you are older than 30.
+
+1) Fill a cauldron with used bath water.
+2) Put a moderately large frog in the water.
+3) Let the preparation rest overnight.
+4) The next morning thank and free your little green friend.
+5) Boil the water and add in a few sticks of oak tree.
+6) Crush 5 river stones to a fine powder.
+7) Mix in a third of the powder and stir vigorously.
+8) Let the preparation rest for a day.
+9) Add hairs from the tail of a squirrel (willingly given).
+10) Add the remaining stone powder.
+11) Stir the potion very vigorously, in all directions.
+12) Take some time to rest after such an effort.
+13) Rest a little bit more.
+14) Even take a nap if you want.
+15) Add a few larch tree needles for seasoning.
+16) Drink the potion from the cauldron.
+
+~/Mountain/Cave/Book_of_potions
+[mission 25] $ cd ..
+
+~/Mountain/Cave
+[mission 25] $ cat Book_of_potions/page_03 Book_of_potions/page_04|tail -n 16
+1) Fill a cauldron with used bath water.
+2) Put a moderately large frog in the water.
+3) Let the preparation rest overnight.
+4) The next morning thank and free your little green friend.
+5) Boil the water and add in a few sticks of oak tree.
+6) Crush 5 river stones to a fine powder.
+7) Mix in a third of the powder and stir vigorously.
+8) Let the preparation rest for a day.
+9) Add hairs from the tail of a squirrel (willingly given).
+10) Add the remaining stone powder.
+11) Stir the potion very vigorously, in all directions.
+12) Take some time to rest after such an effort.
+13) Rest a little bit more.
+14) Even take a nap if you want.
+15) Add a few larch tree needles for seasoning.
+16) Drink the potion from the cauldron.
+
+~/Mountain/Cave
+[mission 25] $ gsh check
+
+Congratulations, mission 25 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+~/Mountain/Cave
+[mission 26] $ gsh goal
+
+      _________________________________________________________________________________________________________________________________
+    / \                                                                                                                                \.
+   |   | Mission goal                                                                                                                  |.
+    \_ | ============                                                                                                                  |.
+       |                                                                                                                               |.
+       | The old hermit is thirsty and he would like you lookup the recipe for distilled water.                                        |.
+       |                                                                                                                               |.
+       | In order to validate the mission, you need to be in the cave with Servillus **and** your last command prior to ``gsh check``  |.
+       | must show the steps for the recipe and nothing else.                                                                          |.
+       |                                                                                                                               |.
+       | Note: you shouldn't alter the content of the book of potions.                                                                 |.
+       |                                                                                                                               |.
+       |                                                                                                                               |.
+       | Useful commands                                                                                                               |.
+       | ===============                                                                                                               |.
+       |                                                                                                                               |.
+       | head [-n K] [FILE]                                                                                                            |.
+       | Print the first lines (10 by default, K if ``-n K`` is used) of the given file, or standard input if no file is given.        |.
+       |                                                                                                                               |.
+       | tail [-n K] [FILE]                                                                                                            |.
+       | Print the last lines (10 by default, K if ``-n K`` is used) of the given file, or standard input if no file is given.         |.
+       |                                                                                                                               |.
+       | COMMAND1 | COMMAND2                                                                                                           |.
+       | Run the two commands, feeding the "standard output" of the former into the "standard input" of the latter.                    |.
+       | Remark: by analogy with plumbing "|" is called "pipe".                                                                        |.
+       |                                                                                                                               |.
+       |                                                                                                                               |.
+       | Remark                                                                                                                        |.
+       | ------                                                                                                                        |.
+       |                                                                                                                               |.
+       | Parts in [square brackets] in command descriptions are stand for optional parts. The brackets are not part of the command.    |.
+       |   ____________________________________________________________________________________________________________________________|___
+       |  /                                                                                                                               /.
+       \_/_______________________________________________________________________________________________________________________________/.
+
+
+~/Mountain/Cave
+[mission 26] $ cd Book_of_potions/
+
+~/Mountain/Cave/Book_of_potions
+[mission 26] $ cat table_of_contents 
+1. Transformation potion -------------------------- pages 1-2
+2. Elixir of youth -------------------------------- pages 3-4
+3. Philter of love ----------------------------------- page 5
+4. Bottled death (powerful poison) ------------------- page 6
+5. Herbal tea ---------------------------------------- page 7
+6. Draft of invisibility -------------------------- pages 7-8
+7. Homeopathic healing potion (part 1) ------------ pages 8-9
+8. Homeopathic healing potion (part 2) -------------- page 10
+9. Homeopathic healing potion (part 3) -------------- page 11
+10. Toadstool stew ---------------------------------- page 12
+11. Distilled water --------------------------------- page 13
+12. King's ale -------------------------------------- Page 13
+
+~/Mountain/Cave/Book_of_potions
+[mission 26] $ cat page_13
+Distilled water
+---------------
+
+1) Boil water in a big pot.
+2) Condense the vapor in a fresh container.
+3) Add minerals for a better taste (optional).
+
+King's ale
+----------
+
+1) Go to the castle's cellar and grab a bottle.
+2) Serve cold, in a pint.
+
+~/Mountain/Cave/Book_of_potions
+[mission 26] $ cd ..
+
+~/Mountain/Cave
+[mission 26] $ head -n 6 Book_of_potions/page_13|tail -n 3
+1) Boil water in a big pot.
+2) Condense the vapor in a fresh container.
+3) Add minerals for a better taste (optional).
+
+~/Mountain/Cave
+[mission 26] $ gsh check
+
+Congratulations, mission 26 has been successfully completed!
+                                                                                                                                                                                                                                            
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
+
+
+~
+[mission 27] $ 
+                              *#@*
+                             &_**/~
+                              !$-#
+
+
+          *#@*
+         &_**/~
+          !$-#
+
+^C
+
+~
+[mission 27] $ gsh goa
+                   *#@*
+                  &_**/~
+                   !$-#
+
+l
+
+  ,----------------------------------------------------------------------------------------.
+ (_\                                                                                        \
+    |  Mission goal                                                                          |
+    |  ============                                                                          |
+    |                                                                                        |
+    |  A mischievous imp cast a spell that puts smudges of coal everywhere in the castle.    |
+    |  Find this spell and remove it.                                                        |
+    |                                                                                        |
+    |  Remark                                                                                |
+    |  ------                                                                                |
+    |                                                                                        |
+    |  The spell is a process.                                                               |
+    |                                                                                        |
+    |                                                                                        |
+    |  Useful commands                                                                       |
+    |  ===============                                                                       |
+    |                                                                                        |
+    |  ps                                                                                    |
+    |  List the processes that are currently executed by the shell.                          |
+    |                                                                                        |
+    |  kill N                                                                                |
+    |  Send the termination signal to process number N.                                      |
+    |  Remark: N is called PID, or "process identifier".                                     |
+    |                                                                                        |
+    |  clear                                                                                 |
+    |  Clear the screen.                                                                     |
+    |  The keybinding "Control-L" does the same and is often quicker to use in the terminal. |
+   _|                                                                                        |
+  (_/__________________________________________________________________________________(*)___/
+                                                                                        \\
+                                                                                         ))
+                                                                                         ^
+
+
+~
+[mission 27] $ 
+                           *#@*
+                          &_**/~
+                           !$-#
+
+
+     *#@*
+    &_**/~
+     !$-#
+
+
+                         *#@*
+                        &_**/~
+                         !$-#
+
+
+                              *#@*
+                             &_**/~
+                              !$-#
+
+^C
+
+~
+[mission 27] $ ps
+    PID TTY          TIME CMD
+  74973 pts/0    00:00:00 zsh
+  75005 pts/0    00:00:00 bash
+  75044 pts/0    00:00:00 bash
+  75390 pts/0    00:00:00 spell
+  76308 pts/0    00:00:00 ps
+
+~
+[mission 27] $ 
+           *#@*
+          &_**/~
+           !$-#
+
+<^C
+
+~
+[mission 27] $ 
+              *#@*
+             &_**/~
+              !$-#
+
+
+      *#@*
+     &_**/~
+      !$-#
+
+^C
+
+~
+[mission 27] $ 
+              *#@*
+             &_**/~
+              !$-#
+
+^C
+
+~
+[mission 27] $ kill 
+                   *#@*
+                  &_**/~
+                   !$-#
+
+^C
+
+~
+[mission 27] $ ps
+       *#@*
+      &_**/~
+       !$-#
+
+^C
+
+~
+[mission 27] $ kill 75390
+[1]+  Terminated              "$GSH_TMP/$(gettext "spell")"
+
+~
+[mission 27] $ gsh check
+
+Congratulations, mission 27 has been successfully completed!
+                                                                                                                                                             
+
+  |                                    |
+--+------------------------------------+--
+  | Use the command                    |
+  | $ gsh help                         |
+  | to get the list of "gsh" commands. |
+--+------------------------------------+--
+  |                                    |
